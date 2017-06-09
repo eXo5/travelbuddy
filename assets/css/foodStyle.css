@@ -1,0 +1,61 @@
+
+.pic{
+	float: right;
+    display: block;
+    position: relative;
+    width: 704px;
+    /*left: -51px;*/
+    height: 260px;
+    max-height: 450px;
+}
+
+
+.details1,
+.details2,
+.details3,
+.details4,
+.details5,
+.details6,
+.details7,
+.details8,
+.details9,
+.details10 {
+	/*margin-left: 4%;*/
+	margin-top:20px;
+	/*border: solid 2px black;*/
+	width: 100%;
+	display:flow-root;
+	background-color: orange;
+}
+
+
+p{
+	margin-left:5px;
+	font-size:small;
+	width:100%;
+}
+
+h2{
+	margin-left: 31%;
+    width: 1087px;
+    height: 41px;
+
+}
+
+h5{
+	margin-left: 6px;
+    font-size: 1.64rem;
+    line-height: 110%;
+    position: relative;
+    display:block;
+    width:400px;
+}
+
+a{
+	margin-left: 5px;
+	padding-bottom: 8px;
+}
+
+.font-small{
+	font-size:small;
+}

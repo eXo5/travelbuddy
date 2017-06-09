@@ -5,6 +5,9 @@
  *
  * Made By MaterializeCSS.com
  */
+body{
+ 	background: url("assets/images/city.jpeg");
+ }
 
 .icon-block {
   padding: 0 15px;
