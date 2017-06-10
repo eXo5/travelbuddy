@@ -22,10 +22,15 @@
 .details10 {
 	/*margin-left: 4%;*/
 	margin-top:20px;
-	/*border: solid 2px black;*/
+	border: solid 2px white;
 	width: 100%;
 	display:flow-root;
-	background-color: orange;
+	background-color: #F9A603;
+}
+
+body {
+	background-color: #F25C00;
+	color: #F7EFE2;
 }
 
 
@@ -54,6 +59,7 @@ h5{
 a{
 	margin-left: 5px;
 	padding-bottom: 8px;
+	color: #e91e63;
 }
 
 .font-small{

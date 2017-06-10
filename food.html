@@ -19,8 +19,9 @@
 <body>
 
 <!-- Nav Bar -->
-<nav class="light-blue lighten-1" role="navigation">
-  <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">TravelBud</a>
+<nav class="pink" role="navigation">
+  <div class="nav-wrapper container pink">
+  	<a id="logo-container" href="#" class="brand-logo">TravelBud</a>
     <ul id="nav-mobile" class="side-nav">
       <li><a href="#">Navbar Link</a></li>
     </ul>
@@ -111,8 +112,8 @@
 						//number displayed on screen 
 						var result = "" + (i+1) + ".";
 					
-						var name = $("<h5 class='rName'>" + details.name + "</h5>");
-						var cuisine = $('<p class="font-small"> Type: ' + details.cuisines + '</p>');
+						var name = $("<h4 class='rName'>" + details.name + "</h4>");
+						var cuisine = $('<p class="font-small"> Cuisine: ' + details.cuisines + '</p>');
 						var addr = $('<p class="font-small">' + details.location.address + '</p>');
 						var cityName = $('<p class="font-small"> City: ' + details.location.city + '</p>');
 						
