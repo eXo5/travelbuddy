@@ -3,10 +3,16 @@
 <head>
   <title>The Materialize Example</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">      
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>             
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script><!-- Jquery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>          
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script> <!-- firebase travelBud -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script><!-- momentJS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">                      
 </head>
 <body class="white">
 <nav>
@@ -27,9 +33,11 @@
   <div class="row">
     <div class="col s12 m12 offset-m4">
       <div class="card orange darken-2">
+
+
         <div class="card-content white-text">
-          <span class="card-title black-text">City Name</span>
-          <p>Weather!</p>
+          <span class="card-title black-text" id="cityName">City Name</span>
+            <div class="row" id="weather"></div>
         </div>
 <!--         <div class="card-action">
           <a href="#">This is a link</a>
@@ -49,7 +57,7 @@
          	<p class="white-text">Find the top places to eat in the area.</p>
         </div>
         <div class="card-action black">
-          <a href="#">Places to Eat</a>
+          <a href="food/index.html">Places to Eat</a>
         </div>
   		</div>
 		</div>
@@ -101,8 +109,11 @@
 		</div>
 	</div>
 </div>
+
+
+<!-- scripts -->
+<script src="assets/javascript/choiceapp.js"></script>
    </body>
 </html>
-
 
 
