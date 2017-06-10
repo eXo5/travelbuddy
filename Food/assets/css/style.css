@@ -1,0 +1,86 @@
+.giphy{
+	float:left;
+	margin:20px;
+}
+
+.pic{
+	height:277px;
+	float:right;
+	display: block;
+    position: relative;
+    left: 50px;
+}
+
+.container{
+	float:left;
+	position:relative;
+	border-color:black;
+	border-width: 3px;
+	background-color:brown;
+}
+
+.details1{
+	margin-left:10%;
+	margin-top:20px;
+	border-width: 2px;
+	background: aliceblue;
+	display:flow-root;
+}
+
+.details2{
+	margin-left:10%;
+	margin-top:20px;
+	border-width: 2px;
+	background: aliceblue;
+	display: flow-root;
+}
+
+.details3{
+	margin-left:10%;
+	margin-top:20px;
+	border-width: 2px;
+	background: aliceblue;
+	display: flow-root;
+}
+
+.details4{
+	margin-left:10%;
+	margin-top:20px;
+	border-width: 2px;
+	background: aliceblue;
+	display: flow-root;
+}
+
+.details5{
+	margin-top:20px;
+	margin-left:10%;
+	border-width: 2px;
+	background: aliceblue;
+	display: flow-root;
+}
+
+p{
+	margin-left:5px;
+	font-size:small;
+}
+
+h2{
+	margin-left: 20%;
+}
+
+h5{
+	margin-left: 6px;
+    font-size: 1.64rem;
+    line-height: 110%;
+    position: relative;
+    display:block;
+}
+
+a{
+	margin-left: 5px;
+	padding-bottom: 8px;
+}
+
+.font-small{
+	font-size:small;
+}

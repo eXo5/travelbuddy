@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Food Page</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	
+	<div class="wrapper">
+
+		<!-- temporary -->
+		<form id="animal-form">
+			<label for="animal-form">Enter City Name</label>
+			<input type="text" id="city-input">
+			<input id="search" type="submit" value="Submit">
+		</form>
+		<!--end Temporary-->
+		<h2 class="title"></h2>
+		<div class="container"></div>
+	
+		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript">
+			var cities = [];
+			var globalDetails = "";
+
+			function getCityID(city){
+				var queryURL = "https://developers.zomato.com/api/v2.1/cities?q=" + city + "&apikey=68794916a5d408b51d693e400ac0bc7c";
+
+				$.ajax({
+					url: queryURL,
+					method: "GET"
+				}).done(function(response){
+					//console.log(response);
+	
+					var cityID =response.location_suggestions[0].id;
+					//console.log(cityID);
+			
+					searchByID(cityID);
+				});
+			}
+
+			function searchByID(cityID){
+				var queryURL = "https://developers.zomato.com/api/v2.1/search?entity_id=" + cityID + "&entity_type=city&sort=rating&count=5&apikey=68794916a5d408b51d693e400ac0bc7c";
+
+				$.ajax({
+					url: queryURL,
+					method: "GET"
+				}).done(function(response){
+					console.log(response);
+
+					//prints 5 restaurants
+					for(var i=0; i<5; i++){
+
+						var details = response.restaurants[i].restaurant;
+						//variable used to make sevearl different classes with different numbers
+						var x = i+1;
+						//number displayed on screen 
+						var result = "" + (i+1) + ".";
+					
+						var name = $("<h5>" + details.name + "</h5>");
+						var cuisine = $('<p class="font-small"> Type: ' + details.cuisines + '</p>');
+						var addr = $('<p class="font-small">' + details.location.address + '</p>');
+						var cityName = $('<p class="font-small"> City: ' + details.location.city + '</p>');
+						var dog = $("<p> ---------- </p>");
+						var photo = $("<img src="+ details.thumb+">");
+						var rating = $("<p class='font-small'> Rating: " + details.user_rating.aggregate_rating + "</p>");
+						var menu = $('<a href="'+details.menu_url+'">Menu</a><br>');
+						var website = $('<a href="'+details.url+'">More info on Zomato!</a>');
+						photo.addClass("pic");
+
+						var div = $("<div class=details"+x+"></div>");
+
+						$(".container").append(div);
+						$(".details"+x).append(photo).append(name).append(cuisine).append(addr).append(rating).append(menu).append(website);
+						$(".title").html("Top five places to eat in "+ details.location.city);
+					}
+					
+				});
+			}	
+
+			$("#search").on("click", function(event){
+
+				event.preventDefault();
+
+				var city = $("#city-input").val().trim();
+
+				cities.push(city);
+
+				getCityID(city);
+
+			});
+
+			
+		</script>
+	</div>
+</body>
+</html>
