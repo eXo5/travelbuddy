@@ -1,20 +1,23 @@
-	 // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyB8x6QXkmXvA101lRuoB6Raz6yaGn7aBNM",
-    authDomain: "travelbud-170122.firebaseapp.com",
-    databaseURL: "https://travelbud-170122.firebaseio.com",
-    projectId: "travelbud-170122",
-    storageBucket: "travelbud-170122.appspot.com",
-    messagingSenderId: "224486984603"
-  };
-  firebase.initializeApp(config);
+  $(document).ready(function(){
+    // Initialize Firebase
+  // var config = {
+  //   apiKey: "AIzaSyB8x6QXkmXvA101lRuoB6Raz6yaGn7aBNM",
+  //   authDomain: "travelbud-170122.firebaseapp.com",
+  //   databaseURL: "https://travelbud-170122.firebaseio.com",
+  //   projectId: "travelbud-170122",
+  //   storageBucket: "travelbud-170122.appspot.com",
+  //   messagingSenderId: "224486984603"
+  // };
+  // firebase.initializeApp(config);
 
-  var database = firebase.database();
-  var pageLoad = $(document).ready(function(){
-  });
+  // var database = firebase.database();
+  
+  //Firebase was removed from this because it became unnecessary and was causing errors on pageload when it was inexplicably classified as undefined. I tried a few times to fix it, but then I thought it wasn't really doing anything on this page so I commented it out. 
+ 
 
 
-$(document).ready(function(){
+
+  
        $('.carousel').carousel({
             // dist:0,
             // shift:0,
@@ -57,10 +60,11 @@ $(document).ready(function(){
              $("#cityName").html("<div class='center'><p>" + city + "</p>");
             $("#weather").html("<div class='col s2 offset-s2'>" + day1C +"<br><p class='icon'>" + tempDay + "°F</p><br><img src='https://openweathermap.org/img/w/"+icon0+".png' style=''display:inline-block></div><div class='col s2'>" + day2ab +"<br><p class='icon'>" + tempDay1 + "°F</p><br><img src='https://openweathermap.org/img/w/"+icon1+".png' style=''display:inline-block></div><div class='col s2'>" + day3ab +"<br><p class='icon'>" + tempDay2 + "°F</p><br><img src='https://openweathermap.org/img/w/"+icon1+".png' style=''display:inline-block></div><div class='col s2'>" + day4ab +"<br><p class='icon'>" + tempDay3 + "°F</p><br><img src='https://openweathermap.org/img/w/"+icon2+".png' style=''display:inline-block></div>");
 
-  })
+  });
+
+});
 	
 
 
-})
 
   
