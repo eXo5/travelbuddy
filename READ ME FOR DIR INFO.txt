@@ -1,0 +1,12 @@
+The html pages in the main directory are:
+	index.html
+	choice.html
+	food.html
+	thingstodo.html
+	mapindex.html
+
+index.html is the main page, and the other pages are appropriately titled to their respective sections. mapindex.html was the test page I was going to use for the googlemaps api but I haven't really gotten a chance to do much more than just add a map to it.
+
+The folders on the main directory are all materialize's defaults. 
+
+The assets folder contains the local page specific resources.
