@@ -70,3 +70,45 @@ a{
 .title {
 	right: 25px;
 }
+
+
+@media screen and (max-width: 960px) {
+
+	
+
+
+}
+
+@media screen and (max-width: 768px) {
+	/*#navbar {
+		position: static;
+	}
+
+	#logo {
+		width: 100%;
+		text-align: center;
+	}
+
+	li {
+		float: left;
+		width: 33%;
+		text-align: center;
+				
+	}
+
+	h4 {
+		right: 35px;
+	}
+
+	#connect
+	#aboutme, #porfolio {
+		margin: 2%;
+	}*/
+}
+
+@media screen and (max-width: 640px) {
+	.title{
+		right: 20px;
+	}
+}
+

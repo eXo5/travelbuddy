@@ -7,18 +7,25 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script><!-- Jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script> <!-- firebase travelBud -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script><!-- momentJS -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">                      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">   
+    <script type ="text/javascript">
+        
+    $(document).ready(function(){
+    $('.carousel').carousel();
+    });
+    </script>                   
 </head>
 <body>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
 <nav>
   <div class="nav-wrapper">
     <div class="nav-wrapper pink">
-    <a href="#" class="brand-logo right black-text">TravelBud</a>
+    <a href="#" class="brand-logo right white-text">TravelBud</a>
     <form>
       <div class="input-field">
         <input id="search" type="search" required>
@@ -36,7 +43,7 @@
 
 
         <div class="card-content white-text">
-          <span class="card-title black-text" id="cityName">City Name</span>
+          <span class="card-title white-text" id="cityName">City Name</span>
             <div class="row" id="weather"></div>
         </div>
 <!--         <div class="card-action">
@@ -53,11 +60,11 @@
     		<div class="card-image">
           <img src="assets/images/restaurants.jpg">
         </div>
-        <div class="card-content black">
+        <div class="card-content cyan lighten-1">
 
          	<p class="white-text">Find the top places to eat in the area.</p>
         </div>
-        <div class="card-action black">
+        <div class="card-action cyan lighten-1">
           <a href="food/index.html">Places to Eat</a>
         </div>
   		</div>
@@ -68,28 +75,26 @@
           <img src="assets/images/hotel.jpg">
           
         </div>
-        <div class="card-content black">
+        <div class="card-content cyan lighten-1">
           <p class="white-text">Look here to see the top places to stay.</p>
         </div>
-        <div class="card-action black">
+        <div class="card-action cyan lighten-1">
           <a href="#">Places to Stay</a>
         </div>
 	  	</div>
 		</div>
 	</div>
-<script type="text/javascript">  $(document).ready(function(){
-      $('.carousel').carousel();
-    });</script>
+
 	<div class="row">
     <div class="col s12 m3">
 			<div class="card">
     		<div class="card-image">
           <img src="assets/images/statue.jpeg">
         </div>
-        <div class="card-content black">
+        <div class="card-content cyan lighten-1">
           <p class="white-text">Find out the must-see places while on your visit.</p>
         </div>
-        <div class="card-action black">
+        <div class="card-action cyan lighten-1">
           <a href="#">Places to Go</a>
         </div>
   		</div>
@@ -99,41 +104,19 @@
     		<div class="card-image">
           <img src="assets/images/news.jpg">
         </div>
-        <div class="card-content black">
+        <div class="card-content cyan lighten-1">
           <p class="white-text">Current headlines for this city.</p>
         </div>
-        <div class="card-action black">
+        <div class="card-action cyan lighten-1">
           <a href="#">Headlines</a>
         </div>
   		</div>
 		</div>
 	</div>
 </div>
-<script type="text/javascript"></script>
-<div class="carousel">
-<div class="carousel-item red">
-<h3>First Carousel</h3>
-</div>
-<div class="carousel-item green">
-<h3>Second Carousel</h3>
-</div>
-<div class="carousel-item blue">
-<h3>Third Carousel</h3>
-</div>
-<div class="carousel-item purple">
-<h3>Fourth Carousel</h3>
-</div>
-<div class="carousel-item orange">
-<h3>Fifth Carousel</h3>
-</div>
-</div>
 
 <!-- scripts -->
 <script src="assets/javascript/choiceapp.js">
-  // $('.carousel.carousel-slider').carousel({fullWidth: true});
-  // $(document).ready(function(){
-  //     $('.carousel').carousel();
-  //   });
 </script>
    </body>
 </html>
