@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TravelBud</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">      
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script><!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script> <!-- firebase travelBud -->
+ <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+ <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script type ="text/javascript">
+  $(document).ready(function(){
+      $('.carousel').carousel({
+            // dist:0,
+            // shift:0,
+            // padding:20,
+
+      });
+
+    });
+    </script>                   
+</head>
+<body>
+
+<nav>
+  <div class="nav-wrapper">
+    <div class="nav-wrapper pink">
+    <a href="#" class="brand-logo right black-text">TravelBud</a>
+    <form>
+      <div class="input-field">
+        <input id="search" type="search" required>
+        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+        <i class="material-icons">close</i>
+      </div>
+    </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container white">
+  <div class="row">
+    <div class="col s12 m12 offset-m4">
+      <div class="card orange darken-2">
+        <div class="card-content white-text">
+          <span class="card-title bl-text" id="cityName">City Name</span>
+            <div class="row" id="weather"></div>
+        </div>
+<!--         <div class="card-action">
+          <a href="#">This is a link</a>
+          <a href="#">This is a link</a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="carousel">
+        <a class="carousel-item" href="#one!">
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/images/hotel.jpg">
+            </div>
+            <div class="card-content black">
+              <p class="white-text">Look here to see the top places to stay.</p>
+            </div>
+          </div>
+        </a>
+        <a class="carousel-item" href="#two!">
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/images/statue.jpeg">
+            </div>
+            <div class="card-content black">
+              <p class="white-text">Find out the must-see places while on your visit.</p>
+            </div>
+          </div>
+        </a>
+        <a class="carousel-item" href="#three!">
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/images/news.jpg">
+            </div>
+            <div class="card-content black">
+              <p class="white-text">Current headlines for this city.</p>
+            </div>
+          </div>
+        </a>
+        <a class="carousel-item" href="#four!">
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/images/restaurants.jpg">
+            </div>
+            <div class="card-content black">
+
+              <p class="white-text">Find the top places to eat in the area.</p>
+            </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>    
+  		
+
+
+
+<!-- scripts -->
+<script src="assets/javascript/choiceapp.js">
+</script>
+   </body>
+</html>
+
+

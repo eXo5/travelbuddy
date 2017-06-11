@@ -13,15 +13,7 @@
   var pageLoad = $(document).ready(function(){
   });
 
-
 $(document).ready(function(){
-       $('.carousel').carousel({
-            // dist:0,
-            // shift:0,
-            // padding:20,
-
-      });
-
   //var ref = database.ref("/citySearches");
   //ref.orderByValue().limitToLast(1).on("child_added", function(snapshot){
   	//var city = snapshot.val().cS;
@@ -63,4 +55,3 @@ $(document).ready(function(){
 
 })
 
-  

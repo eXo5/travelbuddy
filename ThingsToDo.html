@@ -21,10 +21,29 @@
 	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript">
 
+		/* -----------------------------------------------*/
+		/*												  */
+		/*		 This program works as follows			  */
+		/*	1. Gets an input (city) from the search jquery*/
+		/*     call.									  */
+		/*  2. Search input (city name) gets sent into    */
+		/*     getCityId funciton to get the cities ID    */
+		/*  3. It is then sent into searchByDestId in     */
+		/*     order to seperate out the attractions from */
+		/*     the hotels or restaurants, gets individual */
+		/*     attraction ID and calls moreVenues with    */
+		/*     that ID and gets the information there.    */
+		/*											      */
+		/* ---------------------------------------------- */
 
-
+		/*this function is called from within the for loop of
+		searchByDestId.
+		The info passed into it is the venue ID for the events
+		that are categorized as "attractions". No loops are used 
+		since it is called inside another loop.*/
 
 		function moreVenues(vId){
+
 			var queryURL = "https://api.tripexpert.com/v1/venues/"+vId+"?&api_key=16f4b9a0eaabb835e60aa42e89c48e11";
 		
 			$.ajax({
@@ -35,12 +54,19 @@
 				var path = data.response.venues[0];
 
 				//console.log(data);
-				console.log(path.name);
+				//name of attraction
+				console.log(path.name);	
+				//address					
 				console.log(path.address);
+				//open hours
 				console.log(path.opening_hours);
+				//review 1
 				console.log("Review 1: " + path.reviews[0].extract);
+				//review 2
 				console.log("Review 2: " + path.reviews[1].extract);
+				//phone number
 				console.log(path.telephone);
+				//website
 				console.log(path.website);
 
 			
@@ -58,9 +84,10 @@
 			}).done(function(data){
 
 				var path = data.response;
+				//count used to limit results to 10
 				var count = 0;
 
-				//traverses entire venues array for all entries of type "attraction"
+				//traverses entire venues array for all entries of type "attraction" 
 				for(var i = 0; i < path.venues.length; i++){
 
 					if(path.venues[i].venue_type_id == 3 && count<10){
@@ -68,6 +95,8 @@
 						count++;
 
 						//console.log("HERE: " +path.venues[i].id);
+
+						//call this function if the id=3 aka is an attraction 
 						moreVenues(path.venues[i].id);
 						
 					}
