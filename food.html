@@ -53,7 +53,38 @@
 		</div>
 	</div>	
 </div>
+<footer class="page-footer pink">
+  <div class="container">
+    <div class="row">
+      <div class="col l10 offset-l2 s12">
+        <h5 class="white-text">Check Out More About This City</h5>
+          <a class="grey-text text-lighten-3" href="#!">Food  | </a>
+          <a class="grey-text text-lighten-3" href="#!">Hotels  | </a>
+          <a class="grey-text text-lighten-3" href="#!">Activities  | </a>
+          <a class="grey-text text-lighten-3" href="#!">Headlines</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col l10 offset-l2 s12">
+        <p class="white-text">Thank you to<a class="grey-text text-lighten-3" href="https://www.zomato.com/woodbridge-nj" target="_blank">Zomato,</a><a class="grey-text text-lighten-3" href="https://www.tripexpert.com/" target="_blank">TripExpert,</a><a class="grey-text text-lighten-3" href="https://openweathermap.org/" target="_blank"> OpenWeatherMap,</a><a class="grey-text text-lighten-3" href="https://www.nytimes.com/" target="_blank">and The New York Times</a> for making our site possible.</p>
+      </div>
+    </div>
 
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="row">
+      <div class="col l2 s12">
+        <h5 class="white-text">TravelBud</h5>
+      </div>
+      <div class="col l8 s12 offset-l2">
+      	    © 2017 Copyright Romilla Pereira, Emily Polansky, Michael Russo, and Mike Yingling
+      </div>
+     </div>
+
+    </div>
+  </div>
+</footer>
 
 
 
@@ -114,7 +145,7 @@
 					
 						var name = $("<h4 class='rName'>" + details.name + "</h4>");
 						var cuisine = $('<p class="font-small"> Cuisine: ' + details.cuisines + '</p>');
-						var addr = $('<p class="font-small">' + details.location.address + '</p>');
+						var addr = $('<p class="font-small" id="address">' + details.location.address + '</p>');
 						var cityName = $('<p class="font-small"> City: ' + details.location.city + '</p>');
 						
 						var photo = $("<img src="+ details.thumb+" class='rName'>");

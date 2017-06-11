@@ -7,14 +7,14 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script><!-- Jquery -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>          
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script> <!-- firebase travelBud -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script><!-- momentJS -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">                      
 </head>
-<body class="white">
+<body>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 <nav>
   <div class="nav-wrapper">
     <div class="nav-wrapper pink">
@@ -77,7 +77,9 @@
 	  	</div>
 		</div>
 	</div>
-
+<script type="text/javascript">  $(document).ready(function(){
+      $('.carousel').carousel();
+    });</script>
 	<div class="row">
     <div class="col s12 m3">
 			<div class="card">
@@ -107,32 +109,31 @@
 		</div>
 	</div>
 </div>
-
-<div class="carousel carousel-slider center" data-indicators="true">
-    <div class="carousel-fixed-item center">
-      <a class="btn waves-effect white grey-text darken-text-2">button</a>
-    </div>
-    <div class="carousel-item red white-text" href="#one!">
-      <h2>First Panel</h2>
-      <p class="white-text">This is your first panel</p>
-    </div>
-    <div class="carousel-item amber white-text" href="#two!">
-      <h2>Second Panel</h2>
-      <p class="white-text">This is your second panel</p>
-    </div>
-    <div class="carousel-item green white-text" href="#three!">
-      <h2>Third Panel</h2>
-      <p class="white-text">This is your third panel</p>
-    </div>
-    <div class="carousel-item blue white-text" href="#four!">
-      <h2>Fourth Panel</h2>
-      <p class="white-text">This is your fourth panel</p>
-    </div>
-  </div>
+<script type="text/javascript"></script>
+<div class="carousel">
+<div class="carousel-item red">
+<h3>First Carousel</h3>
+</div>
+<div class="carousel-item green">
+<h3>Second Carousel</h3>
+</div>
+<div class="carousel-item blue">
+<h3>Third Carousel</h3>
+</div>
+<div class="carousel-item purple">
+<h3>Fourth Carousel</h3>
+</div>
+<div class="carousel-item orange">
+<h3>Fifth Carousel</h3>
+</div>
+</div>
 
 <!-- scripts -->
 <script src="assets/javascript/choiceapp.js">
-  $('.carousel.carousel-slider').carousel({fullWidth: true});
+  // $('.carousel.carousel-slider').carousel({fullWidth: true});
+  // $(document).ready(function(){
+  //     $('.carousel').carousel();
+  //   });
 </script>
    </body>
 </html>

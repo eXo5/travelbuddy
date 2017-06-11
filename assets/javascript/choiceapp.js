@@ -14,7 +14,6 @@
   });
 
 $(document).ready(function(){
-  $('.carousel.carousel-slider').carousel({fullWidth: true});
   //var ref = database.ref("/citySearches");
   //ref.orderByValue().limitToLast(1).on("child_added", function(snapshot){
   	//var city = snapshot.val().cS;
