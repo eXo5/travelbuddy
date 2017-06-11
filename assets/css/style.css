@@ -5,14 +5,18 @@
  *
  * Made By MaterializeCSS.com
  */
-body{
+/*body{
  	background: url("../images/background.png");
  	background-repeat: no-repeat;
  	height: 10%;
 
  
- }
+ }*/
 
+.carousel .carousel-item {
+    height: 400px;
+    width: 400px;
+}
 
 
 .icon-block {
