@@ -18,20 +18,19 @@
 <body>
 
 <nav>
-
     <div class="nav-wrapper pink">
     <a href="#" class="brand-logo white-text">TravelBud</a>
+    <button class="btn waves-effect waves-light right cyan lighten-1" type="submit" name="action" id="searchbutton">Search</button>
     <form>
-      <div class="input-field right pink">
-        <input id="search" type="search" required>
+      <div class="input-field right pink pull-m4" id="searchBar">
+        <input id="search" type="search" placeholder="Type New City Here" required>
         <label class="label-icon" for="search"><i class="material-icons"></i></label>
-        <button class="btn waves-effect waves-light right" type="submit" name="action" id="searchbutton">Submit</button>
       </div>
     </form>
     </div>
-
 </nav>
 
+<br>
 <div class="container white">
   <div class="row">
     <div class="col s12 m12 l10 offset-l1">
@@ -54,7 +53,7 @@
         <img src="assets/images/hotel.jpg">
       </div>
       <div class="card-content cyan lighten-1">
-        <p class="white-text">Look here to see the top places to stay.</p>
+        <p class="white-text" id="hotel">Hotels</p>
       </div>
     </div>
   </a>
@@ -64,7 +63,7 @@
         <img src="assets/images/statue.jpeg">
       </div>
       <div class="card-content cyan lighten-1">
-        <p class="white-text">Find out the must-see places while on your visit.</p>
+        <p class="white-text" id="activities">Activities</p>
       </div>
     </div>
   </a>
@@ -74,7 +73,7 @@
         <img src="assets/images/news.jpg">
       </div>
       <div class="card-content cyan lighten-1">
-        <p class="white-text">Current headlines for this city.</p>
+        <p class="white-text" id="headlines">Headlines</p>
       </div>
     </div>
   </a>
@@ -85,7 +84,7 @@
       </div>
       <div class="card-content cyan lighten-1">
 
-        <p class="white-text">Find the top places to eat in the area.</p>
+        <p class="white-text" id="food">Food</p>
       </div>
       </div>
   </a>
@@ -104,7 +103,11 @@
     </div>
     <div class="row">
       <div class="col s12 m10 l10">
-        <p class="white-text">Thank you to <a class="grey-text text-lighten-3" href="https://www.zomato.com/woodbridge-nj" target="_blank">Zomato, </a><a class="grey-text text-lighten-3" href="https://www.tripexpert.com/" target="_blank">TripExpert, </a><a class="grey-text text-lighten-3" href="https://openweathermap.org/" target="_blank"> OpenWeatherMap, </a><a class="grey-text text-lighten-3" href="https://www.nytimes.com/" target="_blank">and The New York Times</a> for making our site possible.</p>
+        <p class="white-text">Made Possible By:</p>
+        <a href="https://www.zomato.com/woodbridge-nj"><img src="assets/images/zomato.png" class="apiLogo"></a>
+        <a href="https://www.tripexpert.com/"><img src="assets/images/TripExpert_logo.png" class="apiLogo"></a>
+        <a href="https://openweathermap.org"><img src="assets/images/OpenWeatherMap_logo.png" class="apiLogo"></a>
+        <a href="https://www.nytimes.com/"><img src="assets/images/New-York-Times-logo.jpg" class="apiLogo"></a>
       </div>
     </div>
 
