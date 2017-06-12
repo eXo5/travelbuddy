@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
 	<meta charset="utf-8">
 	<title>Things to do</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
@@ -10,6 +11,44 @@
 
 <body>
 
+=======
+  <title>Things To Do</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">      
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script><!-- Jquery -->        
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script> <!-- firebase travelBud -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script><!-- momentJS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">                      
+</head>
+<style type="text/css">
+
+	.row .col {
+	    float: left;
+	    box-sizing: border-box;
+	    padding: 0 .75rem;
+	    min-height: 1px;
+	    background-color: orange;
+
+	}
+
+	body{
+		background-image: url(assets/images/cities.jpg);
+		background-repeat: no-repeat;
+	    background-attachment: fixed;
+	    background-position: center; 
+
+		background-size: cover;
+	}
+
+</style>
+
+<body>
+	
+>>>>>>> a7818b8ba240ecb6e9fb9ceb154b4b76d88adf82
 	<!--temp city imput-->
 	<form id="city-form">
 		<label for="city-form">Enter City Name</label>
@@ -34,6 +73,7 @@
 	<!--title of page gets populated here-->
 	<h2 class="title"></h2>
 	<!--API info entered here-->
+<<<<<<< HEAD
 	<div class ="container" id="displayAPI"></div>
 		<div class="row">
 		<div class="col s12 m5 l5" id="mapBox">
@@ -150,11 +190,14 @@
 				url: queryURL,
 				method: "GET"
 			}).done(function(data){
+=======
+	<div class ="container"></div>
 
-				var path = data.response;
-				//count used to limit results to 10
-				var count = 0;
+>>>>>>> a7818b8ba240ecb6e9fb9ceb154b4b76d88adf82
 
+	<script src="assets/javascript/thingsapp.js"></script>
+
+<<<<<<< HEAD
 
 
 				var createRow = $("<div class='row'></div>");
@@ -231,5 +274,7 @@
 	
 		
 	</script>
+=======
+>>>>>>> a7818b8ba240ecb6e9fb9ceb154b4b76d88adf82
 </body>
 </html>
