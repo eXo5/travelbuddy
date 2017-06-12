@@ -86,13 +86,16 @@ function searchByDestId(dId){
 
 
 
-		var createRow = $("<div class='row'></div>");
+		var createRow = $("<div class='row' id></div>");
 
-		$(".container").append(createRow);
+		$("#displayAPI").append(createRow);
 
-		var createCol = $("<div class='col s6' id='column'></div>");
+		var createCol = $("<div class='col s12 m6 l6 pull-m1' id='column'></div>");
+
+		var createCol2 = $("<div class='col s12 m5 l5 push-m1' id='mapBox'><p>This is a box for a potential map</p></div>");
 
 		$(".row").append(createCol);
+		$(".row").append(createCol2);
 
 		//traverses entire venues array for all entries of type "attraction" 
 		for(var i = 0; i < path.venues.length; i++){
