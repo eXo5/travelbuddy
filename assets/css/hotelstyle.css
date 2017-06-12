@@ -1,0 +1,33 @@
+.row .col {
+    float: left;
+    box-sizing: border-box;
+    padding: 0 .75rem;
+    min-height: 1px;
+    background-color: #FF9300;
+
+}
+
+body{
+	background-image: url("../images/hotel.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+	background-size: cover;
+}
+
+footer{
+	margin-bottom:0;
+	width: 100%;
+	background-color: #FE8C00;
+	padding-bottom:1%;
+	padding: 10px;
+}
+
+#city-form{
+	background-color: #FF0057;
+}
+
+.center{
+	color:white;
+	font-size:small;
+}
