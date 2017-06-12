@@ -59,8 +59,8 @@ $(document).ready(function() {
 				var photo = $("<img src="+ details.thumb+" class='rName'>");
 				var rating = $("<p class='font-small'> Rating: " + details.user_rating.aggregate_rating + "</p>");
 				//links
-				var menu = $('<a class="link" href='+details.menu_url+'>Menu</a><br>');
-				var website = $('<a class="link" href='+details.url+'>More info on Zomato!</a>');
+				var menu = $('<a class="link" href='+details.menu_url+' target="blank">Menu</a><br>');
+				var website = $('<a class="link" href='+details.url+' target="blank">More info on Zomato!</a>');
 
 				photo.addClass("pic");
 
