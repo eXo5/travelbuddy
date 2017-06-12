@@ -1,54 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
-	<meta charset="utf-8">
-	<title>Things to do</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/thingsStyle.css">
-	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-</head>
-
-<body>
-
-=======
   <title>Things To Do</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">      
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
+    <meta name="viewport" content="width=device-width, initial-scale=1">      
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script><!-- Jquery -->        
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script> <!-- firebase travelBud -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script><!-- momentJS -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">                      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css"> 
+  <link rel="stylesheet" type="text/css" href="assets/css/thingsStyle.css">                     
 </head>
-<style type="text/css">
-
-	.row .col {
-	    float: left;
-	    box-sizing: border-box;
-	    padding: 0 .75rem;
-	    min-height: 1px;
-	    background-color: orange;
-
-	}
-
-	body{
-		background-image: url(assets/images/cities.jpg);
-		background-repeat: no-repeat;
-	    background-attachment: fixed;
-	    background-position: center; 
-
-		background-size: cover;
-	}
-
-</style>
 
 <body>
 	
->>>>>>> a7818b8ba240ecb6e9fb9ceb154b4b76d88adf82
 	<!--temp city imput-->
 	<form id="city-form">
 		<label for="city-form">Enter City Name</label>
@@ -70,20 +37,15 @@
   </div>
 </nav>
 
-	<!--title of page gets populated here-->
-	<h2 class="title"></h2>
-	<!--API info entered here-->
-<<<<<<< HEAD
-	<div class ="container" id="displayAPI"></div>
-		<div class="row">
-		<div class="col s12 m5 l5" id="mapBox">
-			<p>this is where the map goes</p>
-		</div>
-		</div>
+<!-- API INFO GOES HERE -->
+<!--title of page gets populated here-->
+<h2 class="title"></h2>
+<!--API info entered here-->
+<div class ="container" id="main"></div>
 
 <!-- footer -->
 <footer class="page-footer pink">
-  <div class="container">
+  <div class="container" id="footer">
     <div class="row">
       <div class="col s12 m10 l10 ">
         <h5 class="white-text">Check Out More About This City</h5>
@@ -95,10 +57,13 @@
     </div>
     <div class="row">
       <div class="col s12 m10 l10">
-        <p class="white-text">Thank you to <a class="grey-text text-lighten-3" href="https://www.zomato.com/woodbridge-nj" target="_blank">Zomato, </a><a class="grey-text text-lighten-3" href="https://www.tripexpert.com/" target="_blank">TripExpert, </a><a class="grey-text text-lighten-3" href="https://openweathermap.org/" target="_blank"> OpenWeatherMap, </a><a class="grey-text text-lighten-3" href="https://www.nytimes.com/" target="_blank">and The New York Times</a> for making our site possible.</p>
+        <p class="white-text">Made Possible By:</p>
+        <a href="https://www.zomato.com/woodbridge-nj"><img src="assets/images/zomato.png" class="apiLogo"></a>
+        <a href="https://www.tripexpert.com/"><img src="assets/images/TripExpert_logo.png" class="apiLogo"></a>
+        <a href="https://openweathermap.org"><img src="assets/images/OpenWeatherMap_logo.png" class="apiLogo"></a>
+        <a href="https://www.nytimes.com/"><img src="assets/images/New-York-Times-logo.jpg" class="apiLogo"></a>
       </div>
     </div>
-
   </div>
   <div class="footer-copyright">
     <div class="container">
@@ -107,174 +72,13 @@
         <h5 class="white-text">TravelBud</h5>
       </div>
       <div class="col s12 m10 l8 offset-l2">
-            © 2017 Copyright Romilla Pereira, Emily Polansky, Michael Russo, and Mike Yingling
+        © 2017 Copyright Romilla Pereira, Emily Polansky, Michael Russo, and Mike Yingling
       </div>
      </div>
     </div>
   </div>
 </footer>
-	<script type="text/javascript">
 
-		/* -----------------------------------------------*/
-		/*												  */
-		/*		 This program works as follows			  */
-		/*	1. Gets an input (city) from the search jquery*/
-		/*     call.									  */
-		/*  2. Search input (city name) gets sent into    */
-		/*     getCityId funciton to get the cities ID    */
-		/*  3. It is then sent into searchByDestId in     */
-		/*     order to seperate out the attractions from */
-		/*     the hotels or restaurants, gets individual */
-		/*     attraction ID and calls moreVenues with    */
-		/*     that ID and gets the information there.    */
-		/*											      */
-		/* ---------------------------------------------- */
-
-		/*this function is called from within the for loop of
-		searchByDestId.
-		The info passed into it is the venue ID for the events
-		that are categorized as "attractions". No loops are used 
-		since it is called inside another loop.*/
-		var name = "";
-
-		function moreVenues(vId){
-
-			var queryURL = "https://api.tripexpert.com/v1/venues/"+vId+"?&api_key=16f4b9a0eaabb835e60aa42e89c48e11";
-		
-			$.ajax({
-				url: queryURL,
-				method: "GET"
-			}).done(function(data){
-
-				var path = data.response.venues[0];
-
-				console.log(data);
-				//name of attraction
-				console.log(path.name);	
-				$("#column").append("<h2>"+path.name+"</h2>");
-				$("#column").append("<br>");
-				//address					
-				console.log(path.address);
-				$("#column").append(path.address);
-				$("#column").append("<br>");
-				//open hours
-				console.log(path.opening_hours);
-				$("#column").append(path.opening_hours);
-				$("#column").append("<br>");
-				//review 1
-				console.log("Review 1: " + path.reviews[0].extract);
-				$("#column").append("<b>Review: </b>"+path.reviews[0].extract);
-				$("#column").append("<br>");
-				//review 2
-				// console.log("Review 2: " + path.reviews[1].extract);
-				// $("#column").append("<b>Review: </b>"+path.reviews[1].extract);
-				// $("#column").append("<br>");
-				//phone number
-				console.log(path.telephone);
-				$("#column").append(path.telephone);
-				$("#column").append("<br>");
-				//website
-				console.log(path.website);
-				$("#column").append("<a id='link' href='" + path.website + "'>More Info</a>");
-				$("#column").append("<br><br>");
-			
-			});
-
-		}
-
-		function searchByDestId(dId){
-			
-			var queryURL = "https://api.tripexpert.com/v1/venues?destination_id=" + dId +"&api_key=16f4b9a0eaabb835e60aa42e89c48e11";
-
-			$.ajax({
-				url: queryURL,
-				method: "GET"
-			}).done(function(data){
-=======
-	<div class ="container"></div>
-
->>>>>>> a7818b8ba240ecb6e9fb9ceb154b4b76d88adf82
-
-	<script src="assets/javascript/thingsapp.js"></script>
-
-<<<<<<< HEAD
-
-
-				var createRow = $("<div class='row'></div>");
-
-				$("#displayAPI").append(createRow);
-
-				var createCol = $("<div class='col s12 m6 l6' id='column'></div>");
-
-				$(".row").append(createCol);
-
-				//traverses entire venues array for all entries of type "attraction" 
-				for(var i = 0; i < path.venues.length; i++){
-
-					if(path.venues[i].venue_type_id == 3 && count<10){
-						//count used to make sure we only get the top ten results
-						count++;
-
-						//console.log("HERE: " +path.venues[i].id);
-
-						//call this function if the id=3 aka is an attraction 
-						moreVenues(path.venues[i].id);
-						
-					}
-				}
-
-				//console.log(data);
-				
-			});
-
-		}
-
-		//this function uses the API to extract the ID of the city
-		function getCityID(city){
-
-			var queryURL = "https://api.tripexpert.com/v1/destinations?&api_key=16f4b9a0eaabb835e60aa42e89c48e11";
-			var id = "";
-			var name = city;
-			$.ajax({
-				url: queryURL,
-				method: "GET"
-			}).done(function(data){
-
-			
-				
-				/*This for loop goes into the api objects array and matches the city from the input
-				and then saves the ID number from that location in the object array*/
-
-				for(var i = 0; i<data.response.venues.length;i++){
-
-					if(data.response.venues[i].name.toLowerCase() == city.toLowerCase()){
-						//this is where the city ID is stored
-						id = data.response.venues[i].id;
-						//console.log("ID: " + id);
-					}
-				}
-				//takes the id we found and passes it to the searchById function
-				searchByDestId(id);
-
-			});
-		}
-
-		//gets the input from the search bar 
-		$("#search").on("click", function(event){
-			$("#column").remove();
-			$("#link").remove();
-			$(".row").remove();
-			event.preventDefault();
-			var city = $("#city-input").val().trim();
-			getCityID(city);
-
-		});
-
-
-	
-		
-	</script>
-=======
->>>>>>> a7818b8ba240ecb6e9fb9ceb154b4b76d88adf82
+<script src="assets/javascript/thingsapp.js"></script>
 </body>
 </html>

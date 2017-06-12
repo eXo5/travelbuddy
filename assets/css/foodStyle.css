@@ -1,41 +1,8 @@
 
-.pic{
-	float: right;
-    display: block;
-    position: relative;
-    width: 704px;
-    /*left: -51px;*/
-    height: 260px;
-    max-height: 450px;
-}
-
-
-.details1,
-.details2,
-.details3,
-.details4,
-.details5,
-.details6,
-.details7,
-.details8,
-.details9,
-.details10 {
-	/*margin-left: 4%;*/
-	margin-top:20px;
-<<<<<<< HEAD
-	/*border: solid 3px #e91e63;*/
-=======
-/*	border: solid 3px #e91e63;*/
->>>>>>> df2ad2e31b683deb28668354bf53e8fd3f459613
-	width: 100%;
-	height: 265px;
-	display:flow-root;
-	background-color: #fb8c00;
-}
 
 body {
-	background-color: #26c6da;
-	color: #F7EFE2;
+	background-color: white;
+	color: black;
 }
 
 
@@ -66,13 +33,46 @@ a{
 	padding-bottom: 8px;
 	color: #e91e63;
 }
-/*
-.font-small{
-	font-size:small;
-}*/
+
+.pic{
+	float: right;
+    display: block;
+    position: relative;
+    width: 704px;
+    /*left: -51px;*/
+    height: 260px;
+    max-height: 450px;
+}
+
+
+.details1,
+.details2,
+.details3,
+.details4,
+.details5,
+.details6,
+.details7,
+.details8,
+.details9,
+.details10 {
+	/*margin-left: 4%;*/
+	margin-top:20px;
+	border: solid 1px #fb8c00;
+	width: 100%;
+	height: 261px;
+	display:flow-root;
+	background-color: #fb8c00;
+}
 
 .title {
 	right: 25px;
+}
+
+.apiLogo {
+	height: 50px;
+	width: 50px;
+	float: left;
+	margin-left: 5px;
 }
 
 
@@ -84,30 +84,7 @@ a{
 }
 
 @media screen and (max-width: 768px) {
-	/*#navbar {
-		position: static;
-	}
 
-	#logo {
-		width: 100%;
-		text-align: center;
-	}
-
-	li {
-		float: left;
-		width: 33%;
-		text-align: center;
-				
-	}
-
-	h4 {
-		right: 35px;
-	}
-
-	#connect
-	#aboutme, #porfolio {
-		margin: 2%;
-	}*/
 }
 
 @media screen and (max-width: 640px) {

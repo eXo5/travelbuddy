@@ -8,10 +8,14 @@
 body{
  	background: url("../images/background.png");
  	background-repeat: no-repeat;
- 	height: 10%;
-
- 
  }
+
+.apiLogo {
+	height: 50px;
+	width: 50px;
+	float: left;
+	margin-left: 5px;
+}
 
 
 .icon-block {
@@ -25,3 +29,28 @@ body{
 	margin-top:10px;
 }
 
+.footer-copyright {
+	height: 80px;
+}
+
+#copyright {
+	padding-top: 15px;
+}
+
+
+@media screen and (max-width: 960px) {
+
+	
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 640px) {
+	.title{
+		right: 20px;
+	}
+}
