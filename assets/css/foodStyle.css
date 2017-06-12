@@ -22,7 +22,11 @@
 .details10 {
 	/*margin-left: 4%;*/
 	margin-top:20px;
+<<<<<<< HEAD
 	/*border: solid 3px #e91e63;*/
+=======
+/*	border: solid 3px #e91e63;*/
+>>>>>>> df2ad2e31b683deb28668354bf53e8fd3f459613
 	width: 100%;
 	height: 265px;
 	display:flow-root;
