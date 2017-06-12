@@ -1,3 +1,8 @@
+$(document).ready(function(){
+
+
+
+
 /* -----------------------------------------------*/
 		/*												  */
 		/*		 This program works as follows			  */
@@ -35,7 +40,7 @@
 			}).done(function(data){
 
 				var path = data.response.venues[0];
-				debugger
+				
 				//console.log(data);
 				//name of attraction
 				console.log(path.name);	
@@ -158,12 +163,14 @@
 		}
 
 		//gets the input from the search bar 
-		$("#search").on("click", function(event){
+		//$("#search").on("click", function(event){
 			$("#column").remove();
 			$("#link").remove();
 			$(".row").remove();
-			event.preventDefault();
-			var city = $("#city-input").val().trim();
+			//event.preventDefault();
+			var city = localStorage.getItem("city Search");
 			getCityID(city);
+
+		//});
 
 		});
