@@ -28,7 +28,9 @@
 
   	console.log(city);
 
+   
   	 $.ajax({
+   
   url : "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + ",US&APPID=94759cb6678685b518968236d922ade6&units=imperial&count=7",
   method : "GET",
   }).done(function(response){ 
@@ -53,8 +55,8 @@
     var tempDay3 = Math.floor(response.list[3].temp.day);
     var icon3 = response.list[3].weather[0].icon;
       console.log(response);
-            $("#cityName").html("<div class='center'><p>" + city + "</p>");
-            $("#weather").html("<div class='col s2 offset-s2'>" + day1C +"<br><p class='icon'>" + tempDay + "°F</p><br><img src='https://openweathermap.org/img/w/"+icon0+".png' style=''display:inline-block></div><div class='col s2'>" + day2ab +"<br><p class='icon'>" + tempDay1 + "°F</p><br><img src='https://openweathermap.org/img/w/"+icon1+".png' style=''display:inline-block></div><div class='col s2'>" + day3ab +"<br><p class='icon'>" + tempDay2 + "°F</p><br><img src='https://openweathermap.org/img/w/"+icon1+".png' style=''display:inline-block></div><div class='col s2'>" + day4ab +"<br><p class='icon'>" + tempDay3 + "°F</p><br><img src='https://openweathermap.org/img/w/"+icon2+".png' style=''display:inline-block></div>");
+            $("#cityName").html("<div class='center'><p>" + response.city.name + "</p>");
+            $("#weather").html("<div class='col s2 offset-s2'>" + day1C +"<p class='icon'>" + tempDay + "°F</p><br><img src='https://openweathermap.org/img/w/"+icon0+".png' style=''display:inline-block></div><div class='col s2'>" + day2ab +"<br><p class='icon'>" + tempDay1 + "°F</p><br><img src='https://openweathermap.org/img/w/"+icon1+".png' style=''display:inline-block></div><div class='col s2'>" + day3ab +"<br><p class='icon'>" + tempDay2 + "°F</p><br><img src='https://openweathermap.org/img/w/"+icon1+".png' style=''display:inline-block></div><div class='col s2'>" + day4ab +"<br><p class='icon'>" + tempDay3 + "°F</p><br><img src='https://openweathermap.org/img/w/"+icon2+".png' style=''display:inline-block></div>");
 
   });
 
@@ -62,7 +64,7 @@
 	
 
 if ($("#search").val.length != 0); {
-  $("#searchbutton").on("click", function(event){
+  $("#citysearch").on("submit", function(event){
     event.preventDefault();
     var city = $("#search").val().trim();
     localStorage.setItem("city Search", city);
@@ -94,7 +96,7 @@ if ($("#search").val.length != 0); {
     var tempDay3 = Math.floor(response.list[3].temp.day);
     var icon3 = response.list[3].weather[0].icon;
       console.log(response);
-            $("#cityName").html("<div class='center'><p>" + city + "</p>");
+            $("#cityName").html("<div class='center'><p>" + response.city.name + "</p>");
             $("#weather").html("<div class='col s2 offset-s2'>" + day1C +"<br><p class='icon'>" + tempDay + "°F</p><br><img src='https://openweathermap.org/img/w/"+icon0+".png' style=''display:inline-block></div><div class='col s2'>" + day2ab +"<br><p class='icon'>" + tempDay1 + "°F</p><br><img src='https://openweathermap.org/img/w/"+icon1+".png' style=''display:inline-block></div><div class='col s2'>" + day3ab +"<br><p class='icon'>" + tempDay2 + "°F</p><br><img src='https://openweathermap.org/img/w/"+icon1+".png' style=''display:inline-block></div><div class='col s2'>" + day4ab +"<br><p class='icon'>" + tempDay3 + "°F</p><br><img src='https://openweathermap.org/img/w/"+icon2+".png' style=''display:inline-block></div>");
  });
 

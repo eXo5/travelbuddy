@@ -21,6 +21,12 @@ that are categorized as "attractions". No loops are used
 since it is called inside another loop.*/
 
 //count used to limit results to 10
+
+$(document).ready(function(){
+// on page load the city is retrieved from the localStorage and function getCityID is ran.
+var city = localStorage.getItem("city Search");
+getCityID(city);
+//at the bottom of this file, there's an event listener for a form submit that gets the input from the text-area of the form.
 var count = 0;
 var createRow = "";
 var createCol ="";
@@ -161,12 +167,15 @@ function getCityID(city){
 }
 
 //gets the input from the search bar 
-$("#search").on("click", function(event){
-	$("#column").remove();
-	$("#link").remove();
-	$(".row").remove();
-	event.preventDefault();
-	var city = $("#city-input").val().trim();
-	getCityID(city);
+		$("#search").on("click", function(event){
+			//$("#column").remove();
+			//$("#link").remove();
+			//$(".row").remove();
+			$("#main").html("");
+			event.preventDefault();
+			var city = $("#city-input").val().trim();
+			getCityID(city);
 
-});
+		});
+
+})
