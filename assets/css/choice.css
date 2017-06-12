@@ -1,4 +1,32 @@
+h2 {
+	text-align: center;
+}
 .carousel .carousel-item {
     height: 400px;
     width: 400px;
+}
+
+#searchbutton {
+	top: 15px;
+	right: 5px;
+}
+
+#searchBar {
+	right: 10px;
+	color: #26c6da;
+}
+
+.apiLogo {
+	height: 50px;
+	width: 50px;
+	float: left;
+	margin-left: 5px;
+}
+
+#headlines,
+#activities,
+#food,
+#hotel {
+	text-align: center;
+	font-size: 40px;
 }
