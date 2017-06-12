@@ -1,8 +1,6 @@
-
-
 body {
-	background-color: white;
-	color: black;
+	background-color: #4dd0e1;
+	color: white;
 }
 
 
@@ -31,7 +29,7 @@ h4{
 a{
 	margin-left: 5px;
 	padding-bottom: 8px;
-	color: #e91e63;
+	color: #fce4ec;
 }
 
 .pic{
