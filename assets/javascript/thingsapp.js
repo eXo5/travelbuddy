@@ -164,13 +164,26 @@ $(document).ready(function(){
 
 		//gets the input from the search bar 
 		//$("#search").on("click", function(event){
-			$("#column").remove();
-			$("#link").remove();
-			$(".row").remove();
+			//$("#column").remove();
+			//$("#link").remove();
+			//$(".row").remove();
 			//event.preventDefault();
 			var city = localStorage.getItem("city Search");
 			getCityID(city);
 
 		//});
+
+
+		//gets the input from the search bar 
+		$("#search").on("click", function(event){
+			$("#main").html("");
+			//$("#link").remove();
+			//$(".row").remove();
+			event.preventDefault();
+			var city = $("#city-input").val().trim();
+			localStorage.setItem("city Search", city);
+			getCityID(city);
+
+		});
 
 		});
