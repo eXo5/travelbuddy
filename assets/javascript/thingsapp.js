@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
 	/* -----------------------------------------------*/
-	/*												  */
-	/*		 This program works as follows			  */
+	/*												                        */
+	/*		 This program works as follows			        */
 	/*	1. Gets an input (city) from the search jquery*/
-	/*     call.									  */
+	/*     call.									                    */
 	/*  2. Search input (city name) gets sent into    */
 	/*     getCityId funciton to get the cities ID    */
 	/*  3. It is then sent into searchByDestId in     */
@@ -12,7 +12,7 @@ $(document).ready(function(){
 	/*     the hotels or restaurants, gets individual */
 	/*     attraction ID and calls moreVenues with    */
 	/*     that ID and gets the information there.    */
-	/*											      */
+	/*											                          */
 	/* ---------------------------------------------- */
 
 	/*this function is called from within the for loop of
@@ -79,6 +79,7 @@ $(document).ready(function(){
 
 	}
 
+  
 	function searchByDestId(dId){
 		
 		var queryURL = "https://api.tripexpert.com/v1/venues?destination_id=" + dId +"&api_key=16f4b9a0eaabb835e60aa42e89c48e11";
@@ -88,9 +89,11 @@ $(document).ready(function(){
 			method: "GET"
 		}).done(function(data){
 
+
 			var path = data.response;
 
 			console.log(data);
+
 
 			//traverses entire venues array for all entries of type "attraction" 
 			for(var i = 0; i < path.venues.length; i++){
@@ -134,12 +137,14 @@ $(document).ready(function(){
 			/*This for loop goes into the api objects array and matches the city from the input
 			and then saves the ID number from that location in the object array*/
 
+
 			for(var i = 0; i<data.response.venues.length;i++){
 
 				if(data.response.venues[i].name.toLowerCase() == city.toLowerCase()){
 					//this is where the city ID is stored
 					id = data.response.venues[i].id;
 					//console.log("ID: " + id);
+
 				}
 
 			}
@@ -172,6 +177,7 @@ $(document).ready(function(){
 		getCityID(city);
 	});
 
+
 	$("#citysearch").on("submit", function(event){
 		event.preventDefault();
 		
@@ -192,6 +198,7 @@ $(document).ready(function(){
 		localStorage.setItem("city Search", city);
 		getCityID(city);
 	});
+
 
 	var city = localStorage.getItem("city Search");
 	getCityID(city);

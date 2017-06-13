@@ -162,6 +162,7 @@ $(document).ready(function(){
 
 					id = data.response.venues[i].id;
 					//console.log("ID: " + id);
+					$(".title").html("Top things to do in " + data.response.venues[i].name);
 				}
 
 			}

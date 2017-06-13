@@ -65,7 +65,9 @@ margin-left: 5px;
 	color: #26c6da;
 }
 
-
+.title {
+	text-indent: 10%;
+}
 
 
 @media screen and (max-width: 960px) {
@@ -108,4 +110,7 @@ margin-left: 5px;
 	#column9 {
     	width: 435px;
    } 
+   .title {
+   	text-indent: 1px;
+   }
 }

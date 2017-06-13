@@ -63,7 +63,7 @@ a{
 }
 
 .title {
-	right: 25px;
+	margin-left: 350px;
 }
 
 .apiLogo {
@@ -90,6 +90,10 @@ a{
 	padding-top: 15px;
 	right: 10px;
 	color: #26c6da;
+}
+
+#copyright {
+    padding-left: 20px;
 }
 
 
