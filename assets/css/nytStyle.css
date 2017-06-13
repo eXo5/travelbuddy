@@ -52,6 +52,10 @@ a{
     left: 80px;
 }
 
+#copyright {
+    padding-top: 20px;
+}
+
 @media screen and (max-width: 960px) {
     
 }
