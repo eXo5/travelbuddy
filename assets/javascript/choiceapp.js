@@ -72,13 +72,13 @@ if ($("#search").val.length != 0); {
     $("#citysearch").submit();
   });
 
-
   $("#citysearch").on("submit", function(event){
     event.preventDefault();
     var city = $("#search").val().trim();
     localStorage.setItem("city Search", city);
     console.log(city);
     
+
 
 
 
