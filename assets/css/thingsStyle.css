@@ -4,6 +4,13 @@ body{
     background-attachment: fixed;
     background-position: center;
 	background-size: cover;
+	display:flex;
+	min-height:100vh;
+	flex-direction: column;
+}
+
+main{
+	flex: 1 0 auto;
 }
 
 #column0,
