@@ -11,8 +11,12 @@ body{
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+	display:flex;
+    min-height: 100vh;
+    flex-direction: column;
+/*    height: 100%;
+    width: 100%;*/
  }
-
 .apiLogo {
 	height: 50px;
 	width: 50px;
@@ -33,8 +37,11 @@ body{
 	margin-top: 27px;
 }
 
-.footer-copyright {
-	height: 80px;
+.page-footer {
+	max-height:400px;
+	width: 100%;
+ 	position:absolute;
+ 	bottom:0;
 }
 
 #copyright {
@@ -45,7 +52,19 @@ body{
 	padding-left: 20px;
 }
 
+@media screen and (max-width: 1080px) {
+	body {
+		background-size: full-width; 
+/*	 	background: url("../images/newYork.png");
+	    background-repeat: no-repeat;
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-size: cover;
+*/
 
+	}
+
+}
 @media screen and (max-width: 960px) {
 
 }

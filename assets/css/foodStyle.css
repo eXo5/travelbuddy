@@ -5,8 +5,13 @@ body{
     background-position: center;
 	background-size: cover;
 	color: white;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 }
-
+main{
+	flex: 1 0 auto;
+}
 
 p{
 	margin-left:5px;

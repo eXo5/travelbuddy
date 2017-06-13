@@ -1,19 +1,19 @@
 $(document).ready(function(){
 
-	/* -----------------------------------------------*/
-	/*												                        */
-	/*		 This program works as follows			        */
-	/*	1. Gets an input (city) from the search jquery*/
-	/*     call.									                    */
-	/*  2. Search input (city name) gets sent into    */
-	/*     getCityId funciton to get the cities ID    */
-	/*  3. It is then sent into searchByDestId in     */
-	/*     order to seperate out the attractions from */
-	/*     the hotels or restaurants, gets individual */
-	/*     attraction ID and calls moreVenues with    */
-	/*     that ID and gets the information there.    */
-	/*											                          */
-	/* ---------------------------------------------- */
+	/* ----------------------------------------------- */
+	/*												   */
+	/*		 This program works as follows			   */
+	/*	1. Gets an input (city) from the search jquery */
+	/*     call.									   */
+	/*  2. Search input (city name) gets sent into     */
+	/*     getCityId funciton to get the cities ID     */
+	/*  3. It is then sent into searchByDestId in      */
+	/*     order to seperate out the attractions from  */
+	/*     the hotels or restaurants, gets individual  */
+	/*     attraction ID and calls moreVenues with     */
+	/*     that ID and gets the information there.     */
+	/*											       */
+	/* ----------------------------------------------- */
 
 	/*this function is called from within the for loop of
 	searchByDestId.
@@ -27,11 +27,11 @@ $(document).ready(function(){
 	var createCol ="";
 	var name = "";
 
-	/*this function is called from within the for loop of
+	/*	this function is called from within the for loop of
 	searchByDestId.
 	The info passed into it is the venue ID for the events
 	that are categorized as "attractions". No loops are used 
-	since it is called inside another loop.*/
+	since it is called inside another loop. */
 
 	function moreVenues(vId, counter){
 
@@ -50,7 +50,7 @@ $(document).ready(function(){
 			console.log("HERE! " + count);
 			$("#column"+(counter-1)).append("<h2>"+path.name+"</h2>");
 			$("#column"+(counter-1)).append("<br>");
-			//address					
+			//address
 			console.log(path.address);
 			$("#column"+(counter-1)).append(path.address);
 			$("#column"+(counter-1)).append("<br>");
@@ -70,7 +70,7 @@ $(document).ready(function(){
 			console.log(path.telephone);
 			$("#column"+(counter-1)).append(path.telephone);
 			$("#column"+(counter-1)).append("<br>");
-			//website
+			//website 
 			console.log(path.website);
 			$("#column"+(counter-1)).append("<a id='link' href='" + path.website + "'>More Info</a>");
 			$("#column"+(counter-1)).append("<br><br>");
@@ -79,7 +79,6 @@ $(document).ready(function(){
 
 	}
 
-  
 	function searchByDestId(dId){
 		
 		var queryURL = "https://api.tripexpert.com/v1/venues?destination_id=" + dId +"&api_key=16f4b9a0eaabb835e60aa42e89c48e11";
@@ -89,12 +88,9 @@ $(document).ready(function(){
 			method: "GET"
 		}).done(function(data){
 
-
 			var path = data.response;
 
-			console.log(data);
-
-
+			//console.log(data);
 			//traverses entire venues array for all entries of type "attraction" 
 			for(var i = 0; i < path.venues.length; i++){
 
@@ -147,6 +143,7 @@ $(document).ready(function(){
 
 				}
 
+
 			}
 			//takes the id we found and passes it to the searchById function
 			searchByDestId(id);
@@ -158,6 +155,8 @@ $(document).ready(function(){
 	//gets the input from the search bar 
 	$("#searchbutton").on("click", function(event){
 		event.preventDefault();
+
+		//removes the columns and rows that were created for new search
 		
 		$("#column").remove();
 		$("#link").remove();
@@ -180,7 +179,9 @@ $(document).ready(function(){
 
 	$("#citysearch").on("submit", function(event){
 		event.preventDefault();
-		
+
+		//removes the columns and rows that were created for new seach
+
 		$("#column").remove();
 		$("#link").remove();
 		$("#row0").remove();
