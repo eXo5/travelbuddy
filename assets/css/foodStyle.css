@@ -1,5 +1,13 @@
-body {
+/*body {
 	background-color: #4dd0e1;
+	color: white;
+}*/
+body{
+	background-image: url("../images/food.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+	background-size: cover;
 	color: white;
 }
 
@@ -36,10 +44,12 @@ a{
 	float: right;
     display: block;
     position: relative;
-    width: 704px;
+    width: 280px;
     /*left: -51px;*/
-    height: 260px;
+    height: 240px;
     max-height: 450px;
+    margin: 10px;
+    border: solid 3px white;
 }
 
 
@@ -55,8 +65,8 @@ a{
 .details10 {
 	/*margin-left: 4%;*/
 	margin-top:20px;
-	border: solid 1px #fb8c00;
-	width: 100%;
+	/*border: solid 1px #fb8c00;*/
+	width: 70%;
 	height: 261px;
 	display:flow-root;
 	background-color: #fb8c00;
@@ -75,6 +85,11 @@ a{
 
 #logo {
 	left: 80px;
+}
+
+#pageTitle {
+	left: 275px;
+	font-size: 25px;
 }
 
 #searchbutton {
@@ -112,28 +127,45 @@ a{
 		/*float: none;*/
 		width: 300px;
 	}
-	.title{
+/*	.title{
 		margin-left: 20%;
 		margin-bottom: 0px;
 		font-size: 40px;
 	}
-}
+*/}
 
 @media screen and (max-width: 640px) {
+	.details1,
+	.details2,
+	.details3,
+	.details4,
+	.details5,
+	.details6,
+	.details7,
+	.details8,
+	.details9,
+	.details10 {
+		width: 100%;
+	}
+
 	.pic {
 		/*float: none;*/
 		width: 200px;
 	}
-	.title{
-		margin-left: 0px;
-		margin-bottom: 0px;
-		font-size: 30px;
-	}
+
 	#logo {
-		font-size: 25px;
+		font-size: 20px;
+		left: 55px;
 	}
+
+	#pageTitle {
+	left: 135px;
+	font-size: 15px;
+	}
+
 	#searchbar {
 		left: 20px;
+		font-size: 15px
 	}
 
 	#search {
