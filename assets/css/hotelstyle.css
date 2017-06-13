@@ -63,9 +63,17 @@ margin-left: 5px;
 	color: #26c6da;
 }
 
+
 .title {
 	text-indent: 3%;
 }
+
+#copyright {
+    padding-top: 20px;
+}
+
+
+
 
 
 @media screen and (max-width: 960px) {
