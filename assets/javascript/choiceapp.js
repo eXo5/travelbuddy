@@ -35,7 +35,7 @@ $('.carousel').carousel({
    
   	 $.ajax({
    
-  url : "https://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + ",US&APPID=94759cb6678685b518968236d922ade6&units=imperial&count=7",
+  url : "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + ",US&APPID=94759cb6678685b518968236d922ade6&units=imperial&count=7",
   method : "GET",
   }).done(function(response){ 
     var day1 = response.list[0].dt;
@@ -83,7 +83,7 @@ if ($("#search").val.length != 0); {
 
 
     $.ajax({
-  url : "https://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + ",US&APPID=94759cb6678685b518968236d922ade6&units=imperial&count=7",
+  url : "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + ",US&APPID=94759cb6678685b518968236d922ade6&units=imperial&count=7",
   method : "GET",
   }).done(function(response){ 
     var day1 = response.list[0].dt;
