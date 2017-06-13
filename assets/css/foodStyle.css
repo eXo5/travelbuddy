@@ -92,6 +92,10 @@ a{
 	color: #26c6da;
 }
 
+#copyright {
+    padding-left: 20px;
+}
+
 
 @media screen and (max-width: 960px) {
 	.pic {

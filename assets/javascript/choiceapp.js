@@ -18,7 +18,7 @@
 $('.carousel').carousel({
   // padding: 200    
 });
-  autoplay()   
+  autoplay() 
   function autoplay() {
   $('.carousel').carousel('next');
   setTimeout(autoplay, 4500);
@@ -72,11 +72,13 @@ if ($("#search").val.length != 0); {
     $("#citysearch").submit();
   });
 
+
   $("#citysearch").on("submit", function(event){
     event.preventDefault();
     var city = $("#search").val().trim();
     localStorage.setItem("city Search", city);
     console.log(city);
+    
 
 
 
