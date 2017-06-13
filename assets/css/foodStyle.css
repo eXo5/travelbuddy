@@ -94,7 +94,10 @@ a{
 
 
 @media screen and (max-width: 960px) {
-
+	.pic {
+		/*float: none;*/
+		width: 300px;
+	}
 	
 
 

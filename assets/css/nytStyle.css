@@ -1,11 +1,11 @@
-/*body {
+body {
     background-image: url("../images/newsPage.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
-*/
+
 .panel-body a {
   word-break: break-all;
 }

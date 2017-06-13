@@ -14,20 +14,16 @@
   
   //Firebase was removed from this because it became unnecessary and was causing errors on pageload when it was inexplicably classified as undefined. I tried a few times to fix it, but then I thought it wasn't really doing anything on this page so I commented it out. 
    
-       $('.carousel').carousel({
-            // dist:0,
-            // shift:0,
-            // padding:20,
+// Moving Carousel
+$('.carousel').carousel({
+  // padding: 200    
+});
+  autoplay()   
+  function autoplay() {
+  $('.carousel').carousel('next');
+  setTimeout(autoplay, 4500);
+}
 
-
-      });
-            // $('.carousel').carousel('next');
-            // $('.carousel').carousel('next', 3); // Move next n times.
-            // // Previous slide
-            // $('.carousel').carousel('prev');
-            // $('.carousel').carousel('prev', 4); // Move prev n times.
-            // // Set to nth slide
-            // $('.carousel').carousel('set', 4);
 
   //var ref = database.ref("/citySearches");
   //ref.orderByValue().limitToLast(1).on("child_added", function(snapshot){
