@@ -1,7 +1,3 @@
-/*body {
-	background-color: #4dd0e1;
-	color: white;
-}*/
 body{
 	background-image: url("../images/food.jpg");
 	background-repeat: no-repeat;
@@ -114,25 +110,15 @@ a{
 
 @media screen and (max-width: 960px) {
 	.pic {
-		/*float: none;*/
 		width: 300px;
 	}
-	
-
-
 }
 
 @media screen and (max-width: 768px) {
 	.pic {
-		/*float: none;*/
 		width: 300px;
 	}
-/*	.title{
-		margin-left: 20%;
-		margin-bottom: 0px;
-		font-size: 40px;
-	}
-*/}
+}
 
 @media screen and (max-width: 640px) {
 	.details1,
@@ -149,7 +135,6 @@ a{
 	}
 
 	.pic {
-		/*float: none;*/
 		width: 200px;
 	}
 
