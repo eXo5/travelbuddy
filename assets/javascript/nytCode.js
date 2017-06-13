@@ -114,7 +114,7 @@ function getCityID(city){
 
 function starter(place){
 
-    // $(".col s8").remove();
+    //$(".col s8").remove();
     // $("#link").remove();
     // $(".row").remove();
     switcher = false;
@@ -131,4 +131,33 @@ function starter(place){
 
 starter(location);
 
+    $("#searchbutton").on("click", function(event){
+        event.preventDefault();
+
+        $(".col s8").remove();
+        $("#link").remove();
+        $(".row").remove();
+
+        location = $("#search").val().trim();
+        //var city = $("#city-input").val().trim();
+        localStorage.setItem("city Search", location);
+        starter(location);
+        
+    });
+
+    $("#citysearch").on("submit", function(){
+        event.preventDefault();
+
+        $(".col s8").remove();
+        $("#link").remove();
+        $(".row").remove();
+
+        location = $("#search").val().trim();
+        localStorage.setItem("city Search", location);
+        starter(location);
+        
+    });
+
 });
+
+
