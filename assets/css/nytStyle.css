@@ -1,0 +1,75 @@
+/*body {
+    background-image: url("../images/newsPage.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+*/
+.panel-body a {
+  word-break: break-all;
+}
+
+a{
+   color: white;
+}
+
+.row .col.s8 {
+    width: 66.6666666667%;
+    margin-left: auto;
+    left: auto;
+    background-color: orange;
+    right: auto;
+    color: white;
+}
+
+#searchbutton {
+    top: 15px;
+    right: 5px;
+}
+
+#searchBar {
+    right: 10px;
+    color: #26c6da;
+}
+
+.apiLogo {
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-left: 5px;
+}
+
+#headlines,
+#activities,
+#food,
+#hotel {
+    text-align: center;
+    font-size: 40px;
+}
+
+#logo {
+    left: 80px;
+}
+
+@media screen and (max-width: 960px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 640px) {
+    #logo {
+        font-size: 25px;
+    }
+    #searchbar {
+        left: 20px;
+    }
+
+    #search {
+        padding-left: 0px;
+        width: 160px;
+    }
+}

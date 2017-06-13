@@ -8,32 +8,62 @@
 
   <!-- Font Awesome CSS Icons (For cool glyphicons) -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-  <!-- Style to fix the issue of text extending past panel length -->
-  <style>
-    .panel-body a {
-      word-break: break-all;
-    }
-
-    a{
-       color: black;
-    }
-
-    .row .col.s8 {
-        width: 66.6666666667%;
-        margin-left: auto;
-        left: auto;
-        background-color: orange;
-        right: auto;
-    }
-
-  </style>
+  <link rel="stylesheet" type="text/css" href="assets/css/nytStyle.css">
 
 </head>
 
 <body>
+<nav>
+  <div class="nav-wrapper pink">
+  <a href="#" class="brand-logo white-text" id="logo">TravelBuddy</a>
+  <button class="btn waves-effect waves-light right cyan lighten-1" type="submit" name="action" id="searchbutton">Search</button>
+  <form id="citysearch">
+    <div class="input-field right pink pull-m4" id="searchBar">
+      <input id="search" type="search" placeholder="search for a new city" required>
+      <label class="label-icon" for="search"><i class="material-icons"></i></label>
+    </div>
+  </form>
+  </div>
+</nav>
+<br>
     <!-- This row will handle all of the retrieved articles -->
     <div class="container" id="main"></div>
+
+<footer class="page-footer pink">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m10 l10 ">
+        <h5 class="white-text">Check Out More About This City</h5>
+          <a class="grey-text text-lighten-3" href="#!">Food  | </a>
+          <a class="grey-text text-lighten-3" href="#!">Hotels  | </a>
+          <a class="grey-text text-lighten-3" href="#!">Activities  | </a>
+          <a class="grey-text text-lighten-3" href="#!">Headlines</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 m10 l10">
+        <p class="white-text">Made Possible By:</p>
+        <a href="https://www.zomato.com/woodbridge-nj"><img src="assets/images/zomato.png" class="apiLogo"></a>
+        <a href="https://www.tripexpert.com/"><img src="assets/images/TripExpert_logo.png" class="apiLogo"></a>
+        <a href="https://openweathermap.org"><img src="assets/images/OpenWeatherMap_logo.png" class="apiLogo"></a>
+        <a href="https://www.nytimes.com/"><img src="assets/images/New-York-Times-logo.jpg" class="apiLogo"></a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="row">
+      <div class="col s12 m3 l2">
+        <h5 class="white-text">TravelBuddy</h5>
+      </div>
+      <div class="col s12 m10 l8 offset-l2">
+            © 2017 Copyright Romilla Pereira, Emily Polansky, Michael Russo, and Mike Yingling
+      </div>
+     </div>
+    </div>
+  </div>
+</footer>
    
 
   <!-- jQuery JS -->
