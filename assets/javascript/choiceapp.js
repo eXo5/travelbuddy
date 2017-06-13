@@ -19,7 +19,15 @@
             // shift:0,
             // padding:20,
 
+
       });
+            // $('.carousel').carousel('next');
+            // $('.carousel').carousel('next', 3); // Move next n times.
+            // // Previous slide
+            // $('.carousel').carousel('prev');
+            // $('.carousel').carousel('prev', 4); // Move prev n times.
+            // // Set to nth slide
+            // $('.carousel').carousel('set', 4);
 
   //var ref = database.ref("/citySearches");
   //ref.orderByValue().limitToLast(1).on("child_added", function(snapshot){
