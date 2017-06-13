@@ -1,4 +1,4 @@
-  $(document).ready(function(){
+ $(document).ready(function(){
     // Initialize Firebase
   // var config = {
   //   apiKey: "AIzaSyB8x6QXkmXvA101lRuoB6Raz6yaGn7aBNM",
@@ -68,11 +68,16 @@ $('.carousel').carousel({
 	
 
 if ($("#search").val.length != 0); {
+  $("#searchbutton").on("click", function() {
+    $("#citysearch").submit();
+  });
+
   $("#citysearch").on("submit", function(event){
     event.preventDefault();
     var city = $("#search").val().trim();
     localStorage.setItem("city Search", city);
     console.log(city);
+
 
 
     $.ajax({
