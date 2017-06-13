@@ -29,7 +29,7 @@ $(document).ready(function(){
 		var createRow = "";
 		var createCol ="";
 		var name = "";
-
+		
 		function moreVenues(vId, counter){
 
 			var queryURL = "https://api.tripexpert.com/v1/venues/"+vId+"?&api_key=16f4b9a0eaabb835e60aa42e89c48e11";
@@ -38,7 +38,6 @@ $(document).ready(function(){
 				url: queryURL,
 				method: "GET"
 			}).done(function(data){
-
 				var path = data.response.venues[0];
 				
 				//console.log(data);
@@ -84,7 +83,7 @@ $(document).ready(function(){
 				url: queryURL,
 				method: "GET"
 			}).done(function(data){
-
+				
 				var path = data.response;
 			
 
@@ -151,9 +150,11 @@ $(document).ready(function(){
 					if(data.response.venues[i].name.toLowerCase() == city.toLowerCase()){
 						//this is where the city ID is stored
 						id = data.response.venues[i].id;
+						$(".title").html("Top things to do in " + data.response.venues[i].name)
+						//console.log(data);
 						//console.log("ID: " + id);
 					}
-
+						
 				}
 				//takes the id we found and passes it to the searchById function
 				searchByDestId(id);
@@ -178,8 +179,8 @@ $(document).ready(function(){
 		$("#searchbutton").on("click", function(event){
 			event.preventDefault();
 			$("#main").html("");
-			//$("#link").remove();
-			//$(".row").remove();
+			$("#link").remove();
+			$(".row").remove();
 			
 			var city = $("#search").val().trim();
 			localStorage.setItem("city Search", city);
