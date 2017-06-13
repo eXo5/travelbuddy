@@ -150,7 +150,7 @@ $(document).ready(function(){
 					if(data.response.venues[i].name.toLowerCase() == city.toLowerCase()){
 						//this is where the city ID is stored
 						id = data.response.venues[i].id;
-						$(".title").html("Top things to do in " + data.response.venues[i].name)
+						
 						//console.log(data);
 						//console.log("ID: " + id);
 					}
