@@ -24,13 +24,15 @@ since it is called inside another loop.*/
 
 $(document).ready(function(){
 	// on page load the city is retrieved from the localStorage and function getCityID is ran.
+	var city = localStorage.getItem("city Search");
+	getCityID(city);
 	//at the bottom of this file, there's an event listener for a form submit that gets the input from the text-area of the form.
 	var count = 0;
 	var createRow = "";
 	var createCol ="";
 	var name = "";
-	var city = localStorage.getItem("city Search");
-	getCityID(city);
+	var titleName= "";
+
 	function moreVenues(vId, counter){
 
 		var queryURL = "https://api.tripexpert.com/v1/venues/"+vId+"?&api_key=16f4b9a0eaabb835e60aa42e89c48e11";
@@ -43,6 +45,8 @@ $(document).ready(function(){
 			var path = data.response.venues[0];
 
 			//console.log(data);
+			
+			console.log("TITLE: " + titleName);
 			//name of attraction
 			console.log(path.name);	
 			console.log("HERE! " + count);
@@ -153,6 +157,9 @@ $(document).ready(function(){
 
 				if(data.response.venues[i].name.toLowerCase() == city.toLowerCase()){
 					//this is where the city ID is stored
+					titleName =  data.response.venues[i].name;
+					console.log(titleName);
+
 					id = data.response.venues[i].id;
 					//console.log("ID: " + id);
 					$(".title").html("Top things to do in " + data.response.venues[i].name);
@@ -160,7 +167,6 @@ $(document).ready(function(){
 
 			}
 			//takes the id we found and passes it to the searchById function
-
 			searchByDestId(id);
 
 		});
@@ -168,25 +174,48 @@ $(document).ready(function(){
 	}
 
 
-//gets the input from the search bar 
-		$("#searchbutton").on("click", function(event){
-			event.preventDefault();
-			$("#main").html("");
-			//$("#link").remove();
-			//$(".row").remove();
-			
-			var city = $("#search").val().trim();
-			localStorage.setItem("city Search", city);
-			getCityID(city);
+	//gets the input from the search bar 
+	$("#searchbutton").on("click", function(event){
+		$("#column").remove();
+		$("#link").remove();
+		$("#row0").remove();
+		$("#row1").remove();
+		$("#row2").remove();
+		$("#row3").remove();
+		$("#row4").remove();
+		$("#row5").remove();
+		$("#row6").remove();
+		$("#row7").remove();
+		$("#row8").remove();
+		$("#row9").remove();
 
-		});
+		$("#main").html("");
+		event.preventDefault();
+		var city = $("#search").val().trim();
+		getCityID(city);
+		localStorage.setItem("city Search", city);
 
-		$("#citysearch").on("submit", function(event){
-			event.preventDefault();
-			$("#main").html("");
-			
-			var city = $("#search").val().trim();
-			localStorage.setItem("city Search", city);
-			getCityID(city);
-		});
-		});
+	});
+
+	$("#citysearch").on("submit", function() {
+		$("#column").remove();
+		$("#link").remove();
+		$("#row0").remove();
+		$("#row1").remove();
+		$("#row2").remove();
+		$("#row3").remove();
+		$("#row4").remove();
+		$("#row5").remove();
+		$("#row6").remove();
+		$("#row7").remove();
+		$("#row8").remove();
+		$("#row9").remove();
+
+		$("main").html("");
+		event.preventDefault();
+		var city = $("#search").val().trim();
+		localStorage.setItem("city Search", city);
+		getCityID(city);
+	})
+
+})
