@@ -46,7 +46,6 @@ a{
     display: block;
     position: relative;
     width: 280px;
-    /*left: -51px;*/
     height: 240px;
     max-height: 450px;
     margin: 10px;
@@ -64,9 +63,8 @@ a{
 .details8,
 .details9,
 .details10 {
-	/*margin-left: 4%;*/
+	margin-left: 10%;
 	margin-top:20px;
-	/*border: solid 1px #fb8c00;*/
 	width: 70%;
 	height: 261px;
 	display:flow-root;
@@ -97,13 +95,7 @@ a{
 	top: 15px;
 	right: 10px;
 }
-#searchbutton {
-	top: 15px;
-	right: 5px;
-}
-
 #searchBar {
-	padding-top: 15px;
 	right: 10px;
 	color: #26c6da;
 }
@@ -137,6 +129,7 @@ a{
 	.details9,
 	.details10 {
 		width: 100%;
+		margin-left: 0%;
 	}
 
 	.pic {
@@ -145,12 +138,12 @@ a{
 
 	#logo {
 		font-size: 20px;
-		left: 55px;
+		left: 60px;
 	}
 
 	#pageTitle {
-	left: 135px;
-	font-size: 15px;
+		left: 145px;
+		font-size: 15px;
 	}
 
 	#searchbar {
