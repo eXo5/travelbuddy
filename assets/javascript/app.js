@@ -64,7 +64,7 @@ $("#search-button").on("click", function(e){
   window.open("choice.html", "_parent");
     });//end AJAX WEATHER function
 
-  }//end on click for search bar
+  //}//end on click for search bar
 
 
  
