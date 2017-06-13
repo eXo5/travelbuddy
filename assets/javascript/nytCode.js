@@ -29,14 +29,16 @@ function printArticles(path, articleCounter){
 
     $("#column"+(articleCounter-1)).append("<h2><a href="+path.web_url+" target='_blank'>"+path.headline.main+"</a></h2>");
 
-
-    $("#column"+(articleCounter-1)).append("<p>"+path.byline.original+"</p>");
+    if(path.byline !== null){
+        $("#column"+(articleCounter-1)).append("<p>"+path.byline.original+"</p>");
+    
   
 
-    $("#column"+(articleCounter-1)).append("<p>"+path.pub_date+"</p>");
-   
+        $("#column"+(articleCounter-1)).append("<p>"+path.pub_date+"</p>");
+       
 
-    $("#column"+(articleCounter-1)).append("<p>"+path.snippet+"</p>");
+        $("#column"+(articleCounter-1)).append("<p>"+path.snippet+"</p>");
+    }
 
 
     //$("#column"+(articleCounter-1)).append("<img src='"+path.multimedia[0].legacy.thumbnail+"' alt='nyt_image>");
@@ -51,8 +53,6 @@ function runQuery(numArticles, queryURL) {
         method: "GET"
     }).done(function(NYTData) {
 
-        
-    
         // Loop through and provide the correct number of articles
         for (var i = 0; i < numArticles; i++) {
 
