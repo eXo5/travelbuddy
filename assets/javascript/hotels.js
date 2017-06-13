@@ -167,15 +167,24 @@ function getCityID(city){
 }
 
 //gets the input from the search bar 
-		$("#search").on("click", function(event){
+		$("#searchbutton").on("click", function(event){
 			//$("#column").remove();
 			//$("#link").remove();
 			//$(".row").remove();
 			$("#main").html("");
 			event.preventDefault();
-			var city = $("#city-input").val().trim();
+			var city = $("#search").val().trim();
 			getCityID(city);
-
+			localStorage.setItem("city Search", city);
+ 
 		});
+
+		$("#citysearch").on("submit", function() {
+			$("main").html("");
+			event.preventDefault();
+			var city = $("#search").val().trim();
+			localStorage.setItem("city Search", city);
+			getCityID(city);
+		})
 
 })

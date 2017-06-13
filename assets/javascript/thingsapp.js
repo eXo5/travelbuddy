@@ -175,15 +175,24 @@ $(document).ready(function(){
 
 
 		//gets the input from the search bar 
-		$("#search").on("click", function(event){
+		$("#searchbutton").on("click", function(event){
+			event.preventDefault();
 			$("#main").html("");
 			//$("#link").remove();
 			//$(".row").remove();
-			event.preventDefault();
-			var city = $("#city-input").val().trim();
+			
+			var city = $("#search").val().trim();
 			localStorage.setItem("city Search", city);
 			getCityID(city);
 
 		});
 
+		$("#citysearch").on("submit", function(event){
+			event.preventDefault();
+			$("#main").html("");
+			
+			var city = $("#search").val().trim();
+			localStorage.setItem("city Search", city);
+			getCityID(city);
+		});
 		});
