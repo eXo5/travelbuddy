@@ -68,7 +68,7 @@ $(document).ready(function() {
 
 				$(".divContainer").append(div);
 				$(".details"+x).append(photo).append(name).append(cuisine).append(addr).append(rating).append(menu).append(website);
-				$(".title").html("Top Ten Places to Eat in "+ details.location.city);
+				// $(".title").html("Top Ten Places to Eat in "+ details.location.city);
 			}
 			
 		});
