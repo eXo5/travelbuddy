@@ -45,6 +45,11 @@ margin-left: 5px;
 	left: 80px;
 }
 
+#pageTitle {
+	left: 275px;
+	font-size: 25px;
+}
+
 #search {
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -82,21 +87,28 @@ margin-left: 5px;
 }
 
 @media screen and (max-width: 640px) {
-	#logo {
-		font-size: 25px;
-	}
-	#searchbar {
-		left: 20px;
-		padding-top: 10px;
-	}
+    #logo {
+        font-size: 20px;
+        left: 60px;
+    }
 
-	#search {
-		padding-left: 0px;
-		width: 160px;
-		top: 15px;
-		padding-bottom: 0px;
-		padding-top: 0px;
-	}
+    #pageTitle {
+    left: 155px;
+    font-size: 15px;
+    }
+
+    #searchbar {
+        left: 20px;
+        font-size: 10px
+        top: -10px;
+
+    }
+
+    #search {
+        padding-left: 0px;
+        width: 160px;
+        bottom: -5px;
+    }
 
 	#column0,
 	#column1,

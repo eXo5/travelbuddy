@@ -46,7 +46,10 @@ margin-left: 5px;
 	left: 80px;
 }
 
-
+#pageTitle {
+	left: 275px;
+	font-size: 25px;
+}
 
 #searchbutton {
 	top: 15px;
@@ -89,16 +92,23 @@ margin-left: 5px;
 
 @media screen and (max-width: 640px) {
 	#logo {
-		font-size: 25px;
+		font-size: 20px;
+		left: 60px;
 	}
+
+	#pageTitle {
+	left: 145px;
+	font-size: 15px;
+	}
+
 	#searchbar {
 		left: 20px;
+		font-size: 15px
 	}
 
 	#search {
 		padding-left: 0px;
 		width: 160px;
-		top: 15px;
 	}
 	
 	#column0,
