@@ -27,14 +27,15 @@ var articleCounter = 0;
 
 function printArticles(path, articleCounter){
 
+
     $("#column"+(articleCounter-1)).append("<h2><a href="+path.web_url+" target='_blank'>"+path.headline.main+"</a></h2>");
 
     if(path.byline !== null){
-        $("#column"+(articleCounter-1)).append("<p>"+path.byline.original+"</p>");
-    
-  
 
-        $("#column"+(articleCounter-1)).append("<p>"+path.pub_date+"</p>");
+        $("#column"+(articleCounter-1)).append("<p>"+path.byline.original+"</p>");
+
+
+        //$("#column"+(articleCounter-1)).append("<p>"+path.pub_date+"</p>");
        
 
         $("#column"+(articleCounter-1)).append("<p>"+path.snippet+"</p>");
@@ -89,6 +90,7 @@ function getCityID(city){
 
         /*This for loop goes into the api objects array and matches the city from the input
         and then saves the ID number from that location in the object array*/
+
         console.log(data);
         for(var i = 0; i<data.response.venues.length; i++){
 
