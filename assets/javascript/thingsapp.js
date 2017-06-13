@@ -109,7 +109,7 @@ $(document).ready(function(){
 
 						$("#main").append(createRow);
 
-						createCol = $("<div class='col s6' id='column"+count+"'></div>");
+						createCol = $("<div class='col s12 m6 l6' id='column"+count+"'></div>");
 
 						$("#row"+count).append(createCol);
 						//count used to make sure we only get the top ten results

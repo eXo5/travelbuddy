@@ -31,3 +31,29 @@ h2 {
 	text-align: center;
 	font-size: 40px;
 }
+
+#logo {
+	left: 80px;
+}
+
+@media screen and (max-width: 960px) {
+	
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 640px) {
+	#logo {
+		font-size: 25px;
+	}
+	#searchbar {
+		left: 20px;
+	}
+
+	#search {
+		padding-left: 0px;
+		width: 160px;
+	}
+}

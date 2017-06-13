@@ -40,9 +40,6 @@ body{
 
 @media screen and (max-width: 960px) {
 
-	
-
-
 }
 
 @media screen and (max-width: 768px) {
@@ -52,5 +49,9 @@ body{
 @media screen and (max-width: 640px) {
 	.title{
 		right: 20px;
+	}
+
+	#city_search {
+		font-size: 12px;
 	}
 }

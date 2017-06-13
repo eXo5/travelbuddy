@@ -42,6 +42,29 @@ float: left;
 margin-left: 5px;
 }
 
+#logo {
+	left: 80px;
+}
+
+
+
+#searchbutton {
+	top: 15px;
+	right: 10px;
+}
+#searchbutton {
+	top: 15px;
+	right: 5px;
+}
+
+#searchBar {
+	/*padding-top: 15px;*/
+	right: 10px;
+	color: #26c6da;
+}
+
+
+
 @media screen and (max-width: 960px) {
 
 	
@@ -54,7 +77,29 @@ margin-left: 5px;
 }
 
 @media screen and (max-width: 640px) {
-	.title{
-		right: 20px;
+	#logo {
+		font-size: 25px;
 	}
+	#searchbar {
+		left: 20px;
+	}
+
+	#search {
+		padding-left: 0px;
+		width: 160px;
+		top: 15px;
+	}
+	
+	#column0,
+	#column1,
+	#column2,
+	#column3,
+	#column4,
+	#column5,
+	#column6,
+	#column7,
+	#column8,
+	#column9 {
+    	width: 435px;
+   } 
 }

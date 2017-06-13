@@ -73,6 +73,25 @@ a{
 	margin-left: 5px;
 }
 
+#logo {
+	left: 80px;
+}
+
+#searchbutton {
+	top: 15px;
+	right: 10px;
+}
+#searchbutton {
+	top: 15px;
+	right: 5px;
+}
+
+#searchBar {
+	padding-top: 15px;
+	right: 10px;
+	color: #26c6da;
+}
+
 
 @media screen and (max-width: 960px) {
 
@@ -82,12 +101,38 @@ a{
 }
 
 @media screen and (max-width: 768px) {
-
+	.pic {
+		/*float: none;*/
+		width: 300px;
+	}
+	.title{
+		margin-left: 20%;
+		margin-bottom: 0px;
+		font-size: 40px;
+	}
 }
 
 @media screen and (max-width: 640px) {
-	.title{
-		right: 20px;
+	.pic {
+		/*float: none;*/
+		width: 200px;
 	}
+	.title{
+		margin-left: 0px;
+		margin-bottom: 0px;
+		font-size: 30px;
+	}
+	#logo {
+		font-size: 25px;
+	}
+	#searchbar {
+		left: 20px;
+	}
+
+	#search {
+		padding-left: 0px;
+		width: 160px;
+	}
+
 }
 
