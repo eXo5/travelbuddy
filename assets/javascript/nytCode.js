@@ -135,8 +135,18 @@ starter(location);
         event.preventDefault();
 
         $(".col s8").remove();
-        $("#link").remove();
-        $(".row").remove();
+        $("#column").remove();
+		$("#link").remove();
+		$("#row0").remove();
+		$("#row1").remove();
+		$("#row2").remove();
+		$("#row3").remove();
+		$("#row4").remove();
+		$("#row5").remove();
+		$("#row6").remove();
+		$("#row7").remove();
+		$("#row8").remove();
+		$("#row9").remove();
 
         location = $("#search").val().trim();
         //var city = $("#city-input").val().trim();
@@ -149,8 +159,18 @@ starter(location);
         event.preventDefault();
 
         $(".col s8").remove();
-        $("#link").remove();
-        $(".row").remove();
+        $("#column").remove();
+		$("#link").remove();
+		$("#row0").remove();
+		$("#row1").remove();
+		$("#row2").remove();
+		$("#row3").remove();
+		$("#row4").remove();
+		$("#row5").remove();
+		$("#row6").remove();
+		$("#row7").remove();
+		$("#row8").remove();
+		$("#row9").remove();
 
         location = $("#search").val().trim();
         localStorage.setItem("city Search", location);

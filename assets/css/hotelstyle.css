@@ -66,9 +66,15 @@ margin-left: 5px;
 	color: #26c6da;
 }
 
+
+.title {
+	text-indent: 3%;
+}
+
 #copyright {
     padding-top: 20px;
 }
+
 
 
 
@@ -117,4 +123,7 @@ margin-left: 5px;
 	#column9 {
     	width: 435px;
    } 
+   .title {
+   	text-indent: 3px;
+   }
 }
