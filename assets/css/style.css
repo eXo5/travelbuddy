@@ -18,9 +18,9 @@ body{
     width: 100%;*/
  }
 .apiLogo {
+	display:inline-block;
 	height: 50px;
 	width: 50px;
-	float: right;
 	margin-left: 5px;
 }
 
@@ -42,8 +42,12 @@ body{
  	position:absolute;
  	bottom:0;
  	padding-top: 0px;
+ 	margin-bottom:0px;
 }
 
+#footContainer {
+	line-height: 2px;
+}
 #copyright {
 	padding-top: 20px;
 }
@@ -53,6 +57,7 @@ body{
 }
 
 #footerLogo {
+	clear:right;
 	font-size: 18px;
 }
 
