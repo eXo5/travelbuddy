@@ -27,12 +27,14 @@ $(document).ready(function(){
 	var createCol ="";
 	var name = "";
 
-	/*	this function is called from within the for loop of
-	searchByDestId.
-	The info passed into it is the venue ID for the events
-	that are categorized as "attractions". No loops are used 
-	since it is called inside another loop. */
 
+
+
+
+	/*	this function is called from within the for loop of
+	searchByDestId.The info passed into it is the venue ID 
+	for the eventsthat are categorized as "attractions". 
+	No loops are used since it is called inside another loop. */
 	function moreVenues(vId, counter){
 
 		var queryURL = "https://api.tripexpert.com/v1/venues/"+vId+"?&api_key=16f4b9a0eaabb835e60aa42e89c48e11";
@@ -62,10 +64,6 @@ $(document).ready(function(){
 			console.log("Review 1: " + path.reviews[0].extract);
 			$("#column"+(counter-1)).append("<b>Review: </b>"+path.reviews[0].extract);
 			$("#column"+(counter-1)).append("<br>");
-			//review 2
-			// console.log("Review 2: " + path.reviews[1].extract);
-			// $("#column").append("<b>Review: </b>"+path.reviews[1].extract);
-			// $("#column").append("<br>");
 			//phone number
 			console.log(path.telephone);
 			$("#column"+(counter-1)).append(path.telephone);
@@ -90,7 +88,6 @@ $(document).ready(function(){
 
 			var path = data.response;
 
-			//console.log(data);
 			//traverses entire venues array for all entries of type "attraction" 
 			for(var i = 0; i < path.venues.length; i++){
 
