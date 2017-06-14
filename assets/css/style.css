@@ -20,10 +20,9 @@ body{
 .apiLogo {
 	height: 50px;
 	width: 50px;
-	float: left;
+	float: right;
 	margin-left: 5px;
 }
-
 
 .icon-block {
   padding: 0 15px;
@@ -42,10 +41,19 @@ body{
 	width: 100%;
  	position:absolute;
  	bottom:0;
+ 	padding-top: 0px;
 }
 
 #copyright {
 	padding-top: 20px;
+}
+
+#copyrightText {
+	font-size: 12px;
+}
+
+#footerLogo {
+	font-size: 18px;
 }
 
 #city_search {
