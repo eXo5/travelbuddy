@@ -93,17 +93,8 @@ $(document).ready(function(){
 		}).done(function(data){
 
 			var path = data.response;
-		
-
-			console.log(data);
-
-			// var createRow = $("<div class='row' id='row"+count+"'></div>");
-
-			// $("#main").append(createRow);
-
-			// var createCol = $("<div class='col s6' id='column'></div>");
-
-			// $("#row"+count).append(createCol);
+	
+			//console.log(data);
 
 			//traverses entire venues array for all entries of type "attraction" 
 			for(var i = 0; i < path.venues.length; i++){
@@ -122,14 +113,13 @@ $(document).ready(function(){
 					//count used to make sure we only get the top ten results
 					count++;
 
-					//console.log("HERE: " +path.venues[i].id);
-
 					//call this function if the id=3 aka is an attraction 
 					moreVenues(path.venues[i].id,count);
 					
 				}
 
 			}
+
 			count=0;
 			//console.log(data);
 			
@@ -189,7 +179,7 @@ $(document).ready(function(){
 		$("#row8").remove();
 		$("#row9").remove();
 
-		$("#main").html("");
+		
 		event.preventDefault();
 		var city = $("#search").val().trim();
 		getCityID(city);
@@ -211,7 +201,6 @@ $(document).ready(function(){
 		$("#row8").remove();
 		$("#row9").remove();
 
-		$("main").html("");
 		event.preventDefault();
 		var city = $("#search").val().trim();
 		localStorage.setItem("city Search", city);

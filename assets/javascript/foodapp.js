@@ -1,9 +1,12 @@
 $(document).ready(function() {
+
 	var cities = [];
 	var globalDetails = "";
 	var city = localStorage.getItem("city Search");
 	cities.push(city);
+
 	getCityID(city);
+
 	function getCityID(city){
 		var queryURL = "https://developers.zomato.com/api/v2.1/cities?q=" + city + "&apikey=68794916a5d408b51d693e400ac0bc7c";
 
@@ -76,16 +79,11 @@ $(document).ready(function() {
 
 	
 		$("#searchbutton").on("click", function(event){
-
-
-		event.preventDefault();
-		var city = $("#search").val().trim();
-		//var city = $("#city-input").val().trim();
-
-		cities.push(city);
-
-		getCityID(city);
-		localStorage.setItem("city Search", city);
+			event.preventDefault();
+			var city = $("#search").val().trim();
+			cities.push(city);
+			getCityID(city);
+			localStorage.setItem("city Search", city);
 		});
 
 		$("#citysearch").on("submit", function(){
