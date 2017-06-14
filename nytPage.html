@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>TravelBuddy | Headlines </title>
+  <title>TravelBuddy | Headlines</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">      
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script><!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"</script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script><!-- firebase travelBud -->
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+ <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-
-  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/nytStyle.css">
-
+  <link rel="stylesheet" type="text/css" href="assets/css/nytStyle.css">             
 </head>
-
 <body>
-<header>
+
 <nav>
   <div class="nav-wrapper pink">
   <a href="index.html" class="brand-logo white-text" id="logo">TravelBuddy |</a>
   <a href="index.html" class="brand-logo white-text" id="pageTitle"> Headlines </a>
-  <button class="btn waves-effect waves-light right cyan lighten-1" type="submit" name="action" id="searchbutton">Search</button>
+  <button class="btn waves-effect waves-light right cyan lighten-1" type="submit" name="action"
+  id="searchbutton">Search</button>
   <form id="citysearch">
     <div class="input-field right pink pull-m4" id="searchBar">
       <input id="search" type="search" placeholder="search for a new city" required>
@@ -27,8 +31,8 @@
   </form>
   </div>
 </nav>
-</header>
 <br>
+
 <main>
     <!-- This row will handle all of the retrieved articles -->
     <div class="container" id="main"></div>

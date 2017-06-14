@@ -42,10 +42,10 @@ main{
 }
 
 .apiLogo {
-height: 50px;
-width: 50px;
-float: left;
-margin-left: 5px;
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-left: 5px;
 }
 
 #logo {
@@ -57,35 +57,21 @@ margin-left: 5px;
 	font-size: 25px;
 }
 
-#search {
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
 #searchbutton {
-	top: 15px;
-	right: 10px;
+    top: 15px;
+    right: 10px;
 }
 #searchbutton {
-	top: 15px;
-	right: 5px;
+    top: 15px;
+    right: 5px;
 }
 
 #searchBar {
-	padding-top: 15px;
-	right: 10px;
-	color: #26c6da;
+    right: 10px;
+    color: #26c6da;
 }
-
-.title {
-	text-indent: 10%;
-}
-
 
 @media screen and (max-width: 960px) {
-
-	
-
 
 }
 
@@ -100,21 +86,18 @@ margin-left: 5px;
     }
 
     #pageTitle {
-    left: 155px;
-    font-size: 15px;
+        left: 150px;
+        font-size: 14px;
     }
 
     #searchbar {
         left: 20px;
-        font-size: 10px
-        top: -10px;
-
+        font-size: 15px
     }
 
     #search {
         padding-left: 0px;
         width: 160px;
-        bottom: -5px;
     }
 
 	#column0,
@@ -129,7 +112,5 @@ margin-left: 5px;
 	#column9 {
     	width: 435px;
    } 
-   .title {
-   	text-indent: 1px;
-   }
+
 }

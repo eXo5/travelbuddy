@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>TravelBuddy | Food</title>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  <title>TravelBuddy | Food</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">      
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-		<meta name="viewport" content="width=device-width, initial-scale=1">      
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css"> -->
-	<link rel="stylesheet" type="text/css" href="assets/css/foodStyle.css">
+  crossorigin="anonymous"></script><!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"</script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script><!-- firebase travelBud -->
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+ <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/foodStyle.css">             
 </head>
 <body>
 
-<!-- Nav Bar -->
-<header>
 <nav>
   <div class="nav-wrapper pink">
   <a href="index.html" class="brand-logo white-text" id="logo">TravelBuddy |</a>
   <a href="index.html" class="brand-logo white-text" id="pageTitle"> Food </a>
-  <button class="btn waves-effect waves-light right cyan lighten-1" type="submit" name="action" id="searchbutton">Search</button>
+  <button class="btn waves-effect waves-light right cyan lighten-1" type="submit" name="action"
+  id="searchbutton">Search</button>
   <form id="citysearch">
     <div class="input-field right pink pull-m4" id="searchBar">
       <input id="search" type="search" placeholder="search for a new city" required>
@@ -32,7 +31,6 @@
   </form>
   </div>
 </nav>
-</header>
 <main>
 <div class="container orange darken-2"></div>
 	<div class="row">

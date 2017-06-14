@@ -81,17 +81,22 @@ a{
     }
 
     #pageTitle {
-    left: 155px;
-    font-size: 15px;
+        left: 150px;
+        font-size: 14px;
     }
 
     #searchbar {
         left: 20px;
-        font-size: 12px
+        font-size: 15px
     }
 
     #search {
         padding-left: 0px;
         width: 160px;
     }
+
+    .row .col.s8 {
+        width: 100%;
+    }
+
 }
